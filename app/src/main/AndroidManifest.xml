@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
+        <activity android:name=".QuizResultsActivity"></activity>
+        <activity android:name=".Quiz3Activity" />
+        <activity android:name=".Quiz2Activity" />
+        <activity android:name=".Quiz1Activity" />
+        <activity android:name=".ChooseQuizActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".CreateAccountActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
