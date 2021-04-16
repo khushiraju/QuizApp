@@ -14,6 +14,7 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
 
         // Get the Intent that started this activity and extract the string
+        // receive intent from quiz1 screen
         Intent intent = getIntent();
 
 
