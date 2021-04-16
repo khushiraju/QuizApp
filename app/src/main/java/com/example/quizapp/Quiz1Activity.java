@@ -9,17 +9,22 @@ import android.widget.EditText;
 
 public class Quiz1Activity extends AppCompatActivity {
 
+
+   //public static final String EXTRA_NAME = "com.example.quizapp.NAME";
+
     @Override
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz1);
     }
-}
 
-public void sendMessage(View view) {
-    Intent intent = new Intent(this, ChooseQuizActivity.class);
-    EditText editText = (EditText) findViewById(R.id.nameEditText);
-    String name = editText.getText().toString();
-    intent.putExtra(EXTRA_NAME, name);
-    startActivity(intent);
+
+    // function goest to quiz feed.
+    public void backButton(View view) {
+        Intent intent = new Intent(this, ChooseQuizActivity.class);
+        startActivity(intent);
     }
+}
