@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class Quiz1Activity extends AppCompatActivity {
 
@@ -32,8 +31,7 @@ public class Quiz1Activity extends AppCompatActivity {
     }
 
     // get text IDS for each of the buttons, need an indication when to
-
-    public String [] fillAnswerArray() {
+    public void fillAnswerArray() {
 
 
         for (int i = 0;  i < answerArray.length; i++) {
