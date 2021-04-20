@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="281dp"
         android:layout_marginBottom="55dp"
-        android:background="@color/dark_purple"
+        android:background="@color/colorPrimary"
         android:text="Sign Up"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
