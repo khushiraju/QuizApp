@@ -33,19 +33,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
     // get text IDS for each of the buttons, need an indication when to
 
-    public String [] fillAnswerArray() {
 
-
-        for (int i = 0;  i < answerArray.length; i++) {
-
-
-
-
-        }
-
-
-
-    }
 
 
     // goes to quiz results page. still need to go back and add code so we can take information from it.
