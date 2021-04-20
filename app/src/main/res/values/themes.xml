@@ -17,7 +17,7 @@
     <!-- THIS STUFF BELOW IS ALL IN STYLES.XML, NOT SURE WHICH ONE WE NEED -->
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
@@ -27,7 +27,7 @@
     <!-- The AppThemeGreen style theme inherits from the default theme (same as above)
      and only changes the key colors and adds more properties to it  -->
 
-    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary2</item>
         <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
         <item name="colorAccent">@color/colorPrimaryLight2</item>
@@ -36,7 +36,7 @@
     <!-- The AppThemeBlue style theme inherits from the default theme (same as above)
      and only changes the key colors and adds more properties to it  -->
 
-    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.AppThemeBlue" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary3</item>
         <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
         <item name="colorAccent">@color/colorPrimaryLight3</item>
