@@ -10,7 +10,10 @@ import android.widget.EditText;
 public class Quiz1Activity extends AppCompatActivity {
 
 
-   //public static final String EXTRA_NAME = "com.example.quizapp.NAME";
+   public static final String EXTRA_NAME = "com.example.quizapp.NAME";
+
+
+   public String[] answerArray = new String [3];
 
     @Override
 
@@ -28,6 +31,22 @@ public class Quiz1Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // get text IDS for each of the buttons, need an indication when to
+
+    public String [] fillAnswerArray() {
+
+
+        for (int i = 0;  i < answerArray.length; i++) {
+
+
+
+
+        }
+
+
+
+    }
+
 
     // goes to quiz results page. still need to go back and add code so we can take information from it.
 
@@ -36,6 +55,8 @@ public class Quiz1Activity extends AppCompatActivity {
         Intent intent = new Intent (this, QuizResultsActivity.class);
         startActivity(intent);
     }
+
+    // ROUGH SKETCH FOR WHAT THE QUIZ CODE WILL LOOK LIKE
 
 
     }
