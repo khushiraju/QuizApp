@@ -27,4 +27,15 @@ public class Quiz1Activity extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         startActivity(intent);
     }
-}
+
+
+    // goes to quiz results page. still need to go back and add code so we can take information from it.
+
+    public void submitResults(View view) {
+
+        Intent intent = new Intent (this, QuizResultsActivity.class);
+        startActivity(intent);
+    }
+
+
+    }

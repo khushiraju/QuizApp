@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintBottom_toTopOf="@+id/q1option1"
+        app:layout_constraintStart_toEndOf="@+id/q1option1" />
 
     <TextView
         android:id="@+id/textView11"
@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintStart_toEndOf="@+id/button10" />
+        app:layout_constraintBottom_toTopOf="@+id/q2option1"
+        app:layout_constraintStart_toEndOf="@+id/q2option1" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -50,11 +50,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        app:layout_constraintBottom_toTopOf="@+id/q3option1"
+        app:layout_constraintStart_toEndOf="@+id/q3option1" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/q1option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -64,25 +64,25 @@
         app:layout_constraintEnd_toStartOf="@+id/textView11" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="83dp"
         android:layout_marginTop="67dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintTop_toBottomOf="@+id/q2option1" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/q2option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/button12" />
+        app:layout_constraintTop_toTopOf="@+id/q2option2" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/q1option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/q2option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
