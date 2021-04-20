@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_purple">#8C54D1</color>
-    <color name="medium_purple">#B09BFE</color>
-    <color name="light_purple">#EFE2F7</color>
-    <color name="green">#31DA77</color>
-    <color name="light_green">#c2ffdb</color>
-    <color name="blue">#14C7DE</color>
-    <color name="light_blue">#9cf3ff</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Default Android Purple colors -->
+    <color name="colorPrimary">#8C54D1</color>
+    <color name="colorPrimaryMed">#B09BFE</color>
+    <color name="colorPrimaryLight">#EFE2F7</color>
+
+    <!-- Color codes for green quiz -->
+    <color name="colorPrimary2">#31DA77</color>
+    <color name="colorPrimaryLight2">#c2ffdb</color>
+
+    <!-- Color codes for blue quiz -->
+    <color name="colorPrimary3">#14C7DE</color>
+    <color name="colorPrimaryLight3">#9cf3ff</color>
+
 </resources>
