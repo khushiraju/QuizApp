@@ -13,6 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="281dp"
         android:layout_marginBottom="55dp"
+        android:onClick="goToSignUp"
         android:text="Sign Up"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button2"
