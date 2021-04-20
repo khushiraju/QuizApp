@@ -27,6 +27,7 @@
         android:layout_width="180dp"
         android:layout_height="0dp"
         android:layout_marginBottom="165dp"
+        android:onClick="goToSignIn"
         android:text="Sign In"
         android:textColor="@android:color/white"
         android:textColorHighlight="@android:color/white"

@@ -20,11 +20,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToSignUp( View view ) {
 
+        Intent intent = new Intent(this, CreateAccountActivity.class);
+        startActivity(intent);
+
+
+    }
+
+
+    public void goToSignIn( View view ) {
+
         Intent intent = new Intent(this, SignInActivity.class);
         startActivity(intent);
 
 
     }
+
+
+
+
 
 
 }
