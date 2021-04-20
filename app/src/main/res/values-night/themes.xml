@@ -1,6 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    
-
     <!-- Base application theme. -->
     <style name="Theme.QuizApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -15,4 +13,33 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- THIS STUFF BELOW IS ALL IN STYLES.XML, NOT SURE WHICH ONE WE NEED -->
+
+    <!-- Base application theme. -->
+    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+    </style>
+
+    <!-- The AppThemeGreen style theme inherits from the default theme (same as above)
+     and only changes the key colors and adds more properties to it  -->
+
+    <style name="Theme.AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
+        <item name="colorAccent">@color/colorPrimaryLight2</item>
+    </style>
+
+    <!-- The AppThemeBlue style theme inherits from the default theme (same as above)
+     and only changes the key colors and adds more properties to it  -->
+
+    <style name="Theme.AppThemeBlue" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary3</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryMed</item>
+        <item name="colorAccent">@color/colorPrimaryLight3</item>
+    </style>
+
 </resources>
