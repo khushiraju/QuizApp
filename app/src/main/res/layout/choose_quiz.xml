@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     tools:context=".ChooseQuizActivity">
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="161dp"
+        android:layout_width="127dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="136dp"
+        android:background="@color/colorPrimary"
         android:text="Sign Out"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,6 +48,7 @@
         android:layout_marginTop="56dp"
         android:text="Choose a Quiz"
         android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,10 +66,11 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_width="127dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="28dp"
+        android:background="@color/colorPrimary"
         android:text="Results"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button6"
