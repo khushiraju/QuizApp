@@ -12,6 +12,8 @@ public class Quiz3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz3);
+
+        Intent intent = getIntent();
     }
 
     public void backButton(View view) {

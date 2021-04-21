@@ -12,6 +12,8 @@ public class Quiz2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz2);
+
+        Intent intent = getIntent();
     }
 
 
