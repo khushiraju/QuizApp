@@ -21,4 +21,10 @@ public class Quiz2Activity extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         startActivity(intent);
     }
+
+    public void submitResults(View view) {
+
+        Intent intent = new Intent (this, QuizResultsActivity.class);
+        startActivity(intent);
+    }
 }
