@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="goToQuizFeed"
     tools:context=".SignInActivity">
 
     <TextView
@@ -68,7 +69,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
-        android:text="Submit"
+        android:onClick="goToQuizFeed"
+        android:text="Go!"
+        android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3" />
