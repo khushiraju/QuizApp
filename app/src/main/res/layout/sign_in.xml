@@ -16,6 +16,7 @@
         android:layout_marginBottom="121dp"
         android:text="Sign In"
         android:textAlignment="center"
+        android:fontFamily="monospace"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
@@ -31,6 +32,7 @@
         android:hint="Type In Your Email"
         android:inputType="textEmailAddress"
         android:textColor="@android:color/black"
+        android:fontFamily="monospace"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +45,7 @@
         android:ems="10"
         android:hint="Type In Your Password"
         android:inputType="textPassword"
+        android:fontFamily="monospace"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +59,7 @@
         android:layout_marginBottom="105dp"
         android:text="Email"
         android:textColor="@android:color/black"
+        android:fontFamily="monospace"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -68,6 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
