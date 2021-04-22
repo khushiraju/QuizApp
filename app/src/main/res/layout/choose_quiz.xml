@@ -11,7 +11,7 @@
         android:id="@+id/button6"
         android:layout_width="127dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/colorPrimary"
         android:text="Sign Out"
         android:textColor="#FFFFFF"
@@ -21,25 +21,29 @@
 
     <ImageButton
         android:id="@+id/quiz1Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="168dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="@color/colorPrimaryLight"
         android:onClick="goToQuiz"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/bow_png" />
 
     <ImageButton
         android:id="@+id/quiz2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/colorPrimaryLight"
         android:onClick="goToQuiz"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/quiz3Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/cloud_png" />
 
     <TextView
         android:id="@+id/textView8"
@@ -56,23 +60,26 @@
 
     <ImageButton
         android:id="@+id/quiz3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimaryLight"
         android:onClick="goToQuiz"
-        app:layout_constraintStart_toEndOf="@+id/quiz1Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz1Button"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/cake_png" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="127dp"
         android:layout_height="69dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="28dp"
         android:background="@color/colorPrimary"
         android:text="Results"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/button6" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz3Button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
