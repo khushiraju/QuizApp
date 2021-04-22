@@ -25,21 +25,19 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:text="TextView"
         android:fontFamily="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/q1option1"
-        app:layout_constraintStart_toEndOf="@+id/q1option1" />
+        android:text="Best time to study?"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="211dp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:text="TextView"
         android:fontFamily="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/q2option1"
-        app:layout_constraintStart_toEndOf="@+id/q2option1" />
+        android:text="Which activity do you prefer?"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="337dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -56,79 +54,73 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/q3option1"
-        app:layout_constraintStart_toEndOf="@+id/q3option1" />
+        android:fontFamily="monospace"
+        android:text="Which color?"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="460dp" />
 
     <Button
         android:id="@+id/q1option1"
         android:layout_width="wrap_content"
-        android:fontFamily="monospace"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:fontFamily="monospace"
+        android:text="12AM"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toStartOf="@+id/textView11" />
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="258dp" />
 
     <Button
         android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginStart="32dp"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:text="MATTE BLACK"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q2option1" />
+        tools:layout_editor_absoluteY="517dp" />
 
     <Button
         android:id="@+id/q2option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:text="MIDNIGHT MOVIE"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/q2option2" />
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="383dp" />
 
     <Button
         android:id="@+id/q1option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="13dp"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:text="10AM"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="258dp" />
 
     <Button
         android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:text="BABY BLUE"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="517dp" />
 
     <Button
         android:id="@+id/q2option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="303dp"
+        android:layout_marginBottom="300dp"
         android:background="@color/colorPrimary3"
-        android:text="Button"
+        android:text="MORNING RUN"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
+        tools:layout_editor_absoluteX="234dp" />
 
     <ImageButton
         android:id="@+id/imageButton4"
