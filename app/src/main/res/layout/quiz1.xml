@@ -11,133 +11,177 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="47dp"
         android:background="@color/colorPrimary"
         android:onClick="submitResults"
         android:text="GO!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3option2" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="82dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="monospace"
-        android:text="Text View"
-        app:layout_constraintBottom_toTopOf="@+id/q1option1"
-        app:layout_constraintStart_toEndOf="@+id/q1option1" />
+        android:text="You have a busy day at school and a friend comes to talk to you about their life problems. You..."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/q1option2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/q2option1"
-        app:layout_constraintStart_toEndOf="@+id/q2option1" />
+        android:text="You are sitting in a restaraunt and it has been 45 minutes and your food has not come. You..."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/q2option2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1option2" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="47dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="48dp"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/q1option2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/bow_png" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:text="TextView"
+        android:layout_width="181dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="44dp"
         android:fontFamily="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/q3option1"
-        app:layout_constraintStart_toEndOf="@+id/q3option1" />
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/q3option2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q2option2" />
 
     <Button
         android:id="@+id/q1option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="63dp"
         android:background="@color/colorPrimary"
-        android:text="Button"
+        android:text="Interrupt them and say that you are busy right now"
         android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/q1option2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/q1option2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Give your undivided attention and do not interrupt them"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toStartOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q1option1"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
         android:background="@color/colorPrimary"
         android:text="Button"
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/q3option2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q2option1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
 
     <Button
         android:id="@+id/q2option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="7dp"
         android:background="@color/colorPrimary"
-        android:text="Button"
+        android:text="Complain loudly and walk up to the server every 5 minutes"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/q2option2" />
-
-    <Button
-        android:id="@+id/q1option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorPrimary"
-        android:text="Button"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/q2option2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
         android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="35dp"
         android:background="@color/colorPrimary"
         android:text="Button"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q3option1"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/q2option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="303dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="9dp"
         android:background="@color/colorPrimary"
-        android:text="Button"
+        android:text="You are getting angry but you wait patiently and do not speak up "
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q2option1"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="19dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="122dp"
         android:background="@color/colorPrimaryLight"
         android:onClick="backButton"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imageedit_3_3913943665" />
