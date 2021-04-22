@@ -58,6 +58,25 @@ public class ChooseQuizActivity extends AppCompatActivity {
     }
 
 
+    public void goToResults (View view) {
+
+        Intent intent = new Intent (this, QuizResultsActivity.class);
+        startActivity(intent);
+
+
+
+
+    }
+
+    public void signOut (View view ) {
+
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+
+
+    }
+
+
 
 
 }
