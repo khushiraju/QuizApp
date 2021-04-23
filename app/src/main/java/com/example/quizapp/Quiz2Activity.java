@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,13 +42,13 @@ public class Quiz2Activity extends AppCompatActivity {
 
         //constraintLayout = findViewById(R.id.color);
 
-        q1o1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        //q1o1.setOnClickListener(new View.OnClickListener() {
+           // @Override
+            //public void onClick(View view) {
                 // set the color to relative layout
-                q1o1.setBackgroundColor(R.color.colorPrimaryMed);
-            }
-        });
+                //q1o1.setBackgroundColor(Color.BLUE);
+            //}
+       // });
 
 
 
