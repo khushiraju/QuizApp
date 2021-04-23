@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 
 import java.util.ArrayList;
@@ -24,6 +25,26 @@ public class Quiz2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz2);
+
+        Button q1o1, q1o2, q2o1, q2o2, q3o1, q3o2;
+        final RelativeLayout relativeLayout = null;
+
+        q1o1 = findViewById(R.id.q1option1);
+        q1o2 = findViewById(R.id.q1option2);
+        q2o1 = findViewById(R.id.q2option1);
+        q2o2 = findViewById(R.id.q2option2);
+        q3o1 = findViewById(R.id.q3option1);
+        q3o2 = findViewById(R.id.q3option2);
+
+        q1o1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                relativeLayout.setBackgroundResource(R.color.colorPrimaryMed);
+            }
+        });
+
+
 
 
         Intent intent = getIntent();
