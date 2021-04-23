@@ -45,7 +45,7 @@ public class Quiz2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // set the color to relative layout
-                q1o1.setBackgroundResource(R.color.colorPrimaryMed);
+                q1o1.setBackgroundColor(R.color.colorPrimaryMed);
             }
         });
 
