@@ -75,7 +75,6 @@
         android:layout_marginEnd="8dp"
         android:background="@color/colorPrimary3"
         android:fontFamily="monospace"
-        android:onClick="getAnswers"
         android:text="12AM"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/q2option1"

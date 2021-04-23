@@ -28,7 +28,7 @@ public class Quiz2Activity extends AppCompatActivity {
         setContentView(R.layout.quiz2);
 
         Button q1o1, q1o2, q2o1, q2o2, q3o1, q3o2;
-        final ConstraintLayout constraintLayout;
+        //final ConstraintLayout constraintLayout;
 
         
 
@@ -39,11 +39,13 @@ public class Quiz2Activity extends AppCompatActivity {
         q3o1 = findViewById(R.id.q3option1);
         q3o2 = findViewById(R.id.q3option2);
 
+        //constraintLayout = findViewById(R.id.color);
+
         q1o1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // set the color to relative layout
-                relativeLayout.setBackgroundResource(R.color.colorPrimaryMed);
+                q1o1.setBackgroundResource(R.color.colorPrimaryMed);
             }
         });
 
