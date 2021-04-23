@@ -1,6 +1,7 @@
 package com.example.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +28,9 @@ public class Quiz2Activity extends AppCompatActivity {
         setContentView(R.layout.quiz2);
 
         Button q1o1, q1o2, q2o1, q2o2, q3o1, q3o2;
-        final RelativeLayout relativeLayout = null;
+        final ConstraintLayout constraintLayout;
+
+        
 
         q1o1 = findViewById(R.id.q1option1);
         q1o2 = findViewById(R.id.q1option2);
