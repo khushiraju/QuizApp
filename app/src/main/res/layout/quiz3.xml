@@ -28,6 +28,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
         android:text="You wake up in the morning, and realize you have to get up or else you're going to be late for work/school. What do you do?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q1option1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -41,6 +42,7 @@
         android:layout_marginBottom="140dp"
         android:fontFamily="monospace"
         android:text="You take a look around your bedroom, and thought that it was very, very, messy. What do you do?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q3option1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
@@ -66,6 +68,7 @@
         android:layout_marginBottom="19dp"
         android:fontFamily="monospace"
         android:text="What would you say is healthy for the body?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q3option1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
