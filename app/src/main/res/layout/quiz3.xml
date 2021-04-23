@@ -22,29 +22,36 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:text="TextView"
+        android:layout_width="396dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
+        android:text="You wake up in the morning, and realize you have to get up or else you're going to be late for work/school. What do you do?"
         app:layout_constraintBottom_toTopOf="@+id/q1option1"
-        app:layout_constraintStart_toEndOf="@+id/q1option1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_width="367dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="140dp"
         android:fontFamily="monospace"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/q2option1"
-        app:layout_constraintStart_toEndOf="@+id/q2option1" />
+        android:text="You take a look around your bedroom, and thought that it was very, very, messy. What do you do?"
+        app:layout_constraintBottom_toTopOf="@+id/q3option1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1option1" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="155dp"
         android:layout_height="100dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="36dp"
         android:background="@color/colorPrimaryLight2"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,78 +64,91 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
-        android:text="TextView"
+        android:fontFamily="monospace"
+        android:text="What would you say is healthy for the body?"
         app:layout_constraintBottom_toTopOf="@+id/q3option1"
-        app:layout_constraintStart_toEndOf="@+id/q3option1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/q1option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="monospace"
+        android:layout_width="133dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="28dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:fontFamily="monospace"
+        android:text="Keep sleeping for 5 more minutes or so..."
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toStartOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="185dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:text="Relaxation"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/q3option2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q2option1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
         android:id="@+id/q2option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:text="Leave it. I never clean my room! Cleaning sucks."
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/q2option2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/q2option2" />
 
     <Button
         android:id="@+id/q1option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:text="Do excercise"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/q1option1"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:text="Balance"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q3option1"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/q2option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="29dp"
         android:layout_marginBottom="303dp"
         android:background="@color/colorPrimary2"
-        android:text="Button"
+        android:text="Clean immediately."
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q2option1" />
 
     <ImageButton
         android:id="@+id/imageButton4"
