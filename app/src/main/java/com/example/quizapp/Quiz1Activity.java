@@ -13,7 +13,7 @@ public class Quiz1Activity extends AppCompatActivity {
    public static final String EXTRA_NAME = "com.example.quizapp.NAME";
 
 
-   public String[] answerArray = new String [3];
+
 
     @Override
 

@@ -12,53 +12,54 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="67dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="33dp"
         android:background="@color/colorPrimary3"
         android:onClick="submitResults"
         android:text="GO!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="211dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="monospace"
         android:text="What is the best time to study for you?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="41dp"
         android:fontFamily="monospace"
         android:text="Which activity do you prefer?"
-        app:layout_constraintBottom_toTopOf="@+id/q2option1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1option2" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="128dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/cloud_png" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="41dp"
         android:fontFamily="monospace"
         android:text="Which color do you prefer?"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,12 +70,15 @@
         android:id="@+id/q1option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/colorPrimary3"
         android:fontFamily="monospace"
+        android:onClick="getAnswers"
         android:text="12AM"
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/q2option1"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -82,19 +86,19 @@
         android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
         android:background="@color/colorPrimary3"
         android:text="MATTE BLACK"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/q2option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
+        android:layout_marginEnd="19dp"
         android:background="@color/colorPrimary3"
         android:text="MIDNIGHT MOVIE"
         android:textColor="#FFFFFF"
@@ -106,48 +110,52 @@
         android:id="@+id/q1option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="46dp"
         android:background="@color/colorPrimary3"
         android:text="10AM"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/q2option1"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginEnd="35dp"
         android:background="@color/colorPrimary3"
         android:text="BABY BLUE"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/q3option1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="@+id/q3option1" />
 
     <Button
         android:id="@+id/q2option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="7dp"
         android:background="@color/colorPrimary3"
         android:text="MORNING RUN"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/q2option1" />
+        app:layout_constraintStart_toEndOf="@+id/q2option1"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="19dp"
+        android:layout_marginEnd="61dp"
         android:background="@color/colorPrimaryLight3"
         android:onClick="backButton"
         android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imageedit_3_3913943665" />
