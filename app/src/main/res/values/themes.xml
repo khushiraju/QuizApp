@@ -13,9 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <!-- THIS STUFF BELOW IS ALL IN STYLES.XML, NOT SURE WHICH ONE WE NEED -->
-
+    
     <!-- Base application theme. -->
     <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
