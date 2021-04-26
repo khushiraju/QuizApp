@@ -16,7 +16,6 @@ import java.util.ArrayList;
 public class Quiz2Activity extends AppCompatActivity {
 
 
-
     public static final String FINAL_ANSWER = "com.example.quizapp.FINALSTRING";
     ArrayList<String> nightOwl = new ArrayList<String>();
     ArrayList<String> morningBird = new ArrayList<String>();
@@ -24,6 +23,15 @@ public class Quiz2Activity extends AppCompatActivity {
 
 
     @Override
+
+    // Resource Citations:  https://www.geeksforgeeks.org/how-to-change-the-background-color-after-clicking-the-button-in-android/
+    // https://stackoverflow.com/questions/3882064/how-to-change-color-of-button-in-android-when-clicked
+    // https://stackoverflow.com/questions/14647810/easier-way-to-get-views-id-string-by-its-id-int
+    // https://stackoverflow.com/questions/3882064/how-to-change-color-of-button-in-android-when-clicked
+    // https://www.youtube.com/watch?v=RJV9Ur-CUpw 
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz2);
@@ -49,7 +57,7 @@ public class Quiz2Activity extends AppCompatActivity {
            // @Override
             public void onClick(View view) {
                 // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+                q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o1);
 
             }
