@@ -135,12 +135,12 @@ public class Quiz3Activity extends AppCompatActivity {
 
         if (choice.contains("option1")) {
 
-            lazy.add(choice);
+            active.add(choice);
         }
 
         else {
 
-            active.add(choice);
+            lazy.add(choice);
         }
 
     }
