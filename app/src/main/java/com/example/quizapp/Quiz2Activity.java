@@ -28,6 +28,7 @@ public class Quiz2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz2);
 
+
         Button q1o1, q1o2, q2o1, q2o2, q3o1, q3o2;
         //final ConstraintLayout constraintLayout;
 
@@ -42,18 +43,68 @@ public class Quiz2Activity extends AppCompatActivity {
 
         //constraintLayout = findViewById(R.id.color);
 
-        //q1o1.setOnClickListener(new View.OnClickListener() {
+        Intent intent = getIntent();
+
+        q1o1.setOnClickListener(new View.OnClickListener() {
            // @Override
-            //public void onClick(View view) {
+            public void onClick(View view) {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
-            //}
-       // });
+                getAnswers(q1o1);
 
+            }
+       });
 
+        q1o2.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                //q1o1.setBackgroundColor(Color.BLUE);
+                getAnswers(q1o2);
 
+            }
+        });
 
-        Intent intent = getIntent();
+        q2o1.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                //q1o1.setBackgroundColor(Color.BLUE);
+                getAnswers(q2o1);
+
+            }
+        });
+
+        q2o2.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                //q1o1.setBackgroundColor(Color.BLUE);
+                getAnswers(q2o2);
+
+            }
+        });
+
+        q3o1.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                //q1o1.setBackgroundColor(Color.BLUE);
+                getAnswers(q3o1);
+
+            }
+        });
+
+        q3o2.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View view) {
+                // set the color to relative layout
+                //q1o1.setBackgroundColor(Color.BLUE);
+                getAnswers(q3o2);
+
+            }
+        });
+
     }
 
 

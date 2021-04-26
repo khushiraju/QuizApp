@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class QuizResultsActivity extends AppCompatActivity {
 
@@ -14,5 +15,10 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         // get intent from quiz page
         Intent intent = getIntent();
+        String message = intent.getStringExtra(Quiz2Activity.FINAL_ANSWER);
+
+        TextView textView = findViewById(R.id.q2answer);
+        textView.setText(message);
+
     }
 }
