@@ -24,10 +24,7 @@ import java.util.Map;
 public class CreateAccountActivity extends AppCompatActivity {
 
     public final String TAG = "CreateAccountActivity";
-    private String name = "";
-            //nameID.getResources().getResourceName(nameID.getId());
-    private String email = "";
-    private String password = "";
+
 
     // Constants to use for labels in database
     public static final String NAME_KEY = "name";
@@ -36,13 +33,14 @@ public class CreateAccountActivity extends AppCompatActivity {
 
 
     // reference to entire database
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_account);
 
+        db = FirebaseFirestore.getInstance();
 
         Intent intent = getIntent();
     }
@@ -59,15 +57,23 @@ public class CreateAccountActivity extends AppCompatActivity {
     }
 
     public void addEvent() {
+        EditText name = (EditText) findViewById(R.id.nameID);
+        EditText email = (EditText) findViewById(R.id.emailID);
+        EditText password = (EditText) findViewById(R.id.passwordID);
+
+        String userName = name.getText().toString();
+        String userEmail = email.getText().toString();
+        String userPassword = password.getText().toString();
+
         // Creates a key-value map of the object to add to the collection
         Map<String, Object> user = new HashMap<String, Object>();
         // Adds the all the key-value pairs to this object
-        user.put(NAME_KEY, name);
-        user.put(EMAIL_KEY, email);
-        user.put(PASSWORD_KEY, password);
+        user.put(NAME_KEY, userName);
+        user.put(EMAIL_KEY, userEmail);
+        user.put(PASSWORD_KEY, userPassword);
         Log.i(TAG, user.toString());
 
-        db.collection("events")
+        db.collection("quizApp")
                 .add(user)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -85,8 +91,9 @@ public class CreateAccountActivity extends AppCompatActivity {
                 });
 
         // Clear the event name field
-        EditText eventNameET = (EditText) findViewById(R.id.nameID);
-        eventNameET.setText("");
+        name.setText("");
+        email.setText("");
+        password.setText("");
 
         closeKeyboard();
     }
