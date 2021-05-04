@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Quiz1Activity extends AppCompatActivity {
 
 
-    public static final String FINAL_ANSWER = "com.example.quizapp.FINALSTRING";
+    public static final String FINAL_ANSWER1 = "com.example.quizapp.FINALSTRING";
     ArrayList<String> extrovert = new ArrayList<String>();
     ArrayList<String> introvert = new ArrayList<String>();
     public String finalString = " ";
@@ -136,7 +136,7 @@ public class Quiz1Activity extends AppCompatActivity {
         introvert.clear();
 
         Intent intent = new Intent (this, QuizResultsActivity.class);
-        intent.putExtra(FINAL_ANSWER, finalString);
+        intent.putExtra(FINAL_ANSWER1, finalString);
         startActivity(intent);
     }
 

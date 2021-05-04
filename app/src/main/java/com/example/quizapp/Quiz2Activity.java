@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Quiz2Activity extends AppCompatActivity {
 
 
-    public static final String FINAL_ANSWER = "com.example.quizapp.FINALSTRING";
+    public static final String FINAL_ANSWER2 = "com.example.quizapp.FINALSTRING";
     ArrayList<String> nightOwl = new ArrayList<String>();
     ArrayList<String> morningBird = new ArrayList<String>();
     public String finalString = " ";
@@ -137,7 +137,7 @@ public class Quiz2Activity extends AppCompatActivity {
         morningBird.clear();
 
         Intent intent = new Intent (this, QuizResultsActivity.class);
-        intent.putExtra(FINAL_ANSWER, finalString);
+        intent.putExtra(FINAL_ANSWER2, finalString);
         startActivity(intent);
     }
 
