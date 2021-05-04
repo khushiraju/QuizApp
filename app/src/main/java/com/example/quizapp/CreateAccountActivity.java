@@ -3,6 +3,7 @@ package com.example.quizapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +14,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -32,29 +38,86 @@ public class CreateAccountActivity extends AppCompatActivity {
     public static final String PASSWORD_KEY = "password";
 
 
+
     // reference to entire database
     private FirebaseFirestore db;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_account);
 
-        db = FirebaseFirestore.getInstance();
 
-        Intent intent = getIntent();
+    private FirebaseAuth mAuth;
+
+        //private FirebaseUser currentUser;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.create_account);
+
+            // db = FirebaseFirestore.getInstance();
+            // ...
+            // Initialize Firebase Auth
+            mAuth = FirebaseAuth.getInstance();
+
+            Intent intent = getIntent();
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            // Check if user is signed in (non-null) and update UI accordingly.
+            FirebaseUser currentUser = mAuth.getCurrentUser();
+            if (currentUser != null) {
+                reload();
+            }
+        }
+
+
+    private void createAccount(String email, String password) {
+        // [START create_user_with_email]
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(CreateAccountActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
+                    }
+                });
+        // [END create_user_with_email]
     }
+
+
 
 
     public void goToQuizFeed(View view) {
 
-        addEvent();
+        EditText name = (EditText) findViewById(R.id.nameID);
+        EditText email = (EditText) findViewById(R.id.emailID);
+        EditText password = (EditText) findViewById(R.id.passwordID);
+
+        String userName = name.getText().toString();
+        String userEmail = email.getText().toString();
+        String userPassword = password.getText().toString();
+
+
+
+        createAccount(userEmail, userPassword);
 
         Intent intent = new Intent(this, ChooseQuizActivity.class);
 
         startActivity(intent);
 
     }
+
+    /*
 
     public void addEvent() {
         EditText name = (EditText) findViewById(R.id.nameID);
@@ -99,6 +162,9 @@ public class CreateAccountActivity extends AppCompatActivity {
     }
 
 
+     */
+
+
     /**
      * This method will be called to minimize the on screen keyboard in the Activity
      * When we get the current view, it is the view that has focus, which is the keyboard
@@ -106,6 +172,7 @@ public class CreateAccountActivity extends AppCompatActivity {
      *
      * Source:  https://www.youtube.com/watch?v=CW5Xekqfx3I
      */
+    /*
     private void closeKeyboard() {
         View view = this.getCurrentFocus();     // view will refer to the keyboard
         if (view != null ){                     // if there is a view that has focus
@@ -114,10 +181,23 @@ public class CreateAccountActivity extends AppCompatActivity {
         }
     }
 
+    */
+
     /*
         This method improves readability of the code for toast messages.  It is a simple helper method
      */
+
+    /*
     private void toastMessage(String message){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    */
+
+
+    private void reload() { }
+
+    private void updateUI(FirebaseUser user) {
+
     }
 }
