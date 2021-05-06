@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/cloud_png" />
+        android:src="@drawable/cloud_png" />
 
     <TextView
         android:id="@+id/textView9"
