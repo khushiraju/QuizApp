@@ -11,25 +11,24 @@
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="59dp"
         android:background="@color/colorPrimaryLight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q1answer"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ImageButton
         android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="183dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="183dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="66dp"
         android:background="@color/colorPrimaryLight"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintBottom_toTopOf="@+id/q2answer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/q1answer"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -49,81 +48,85 @@
         android:id="@+id/q3answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="592dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/q2answer"
+        app:layout_constraintTop_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/q1answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="53dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginBottom="104dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton7"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="81dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bow_png"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/q1answer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView13"
-        tools:srcCompat="@drawable/bow_png" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="200dp"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:srcCompat="@drawable/cloud_png" />
+        android:src="@drawable/cloud_png"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/q2answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="37dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="51dp"
         android:scaleType="fitCenter"
+        android:src="@drawable/cake_png"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/cake_png" />
+        app:layout_constraintEnd_toStartOf="@+id/q2answer"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="111dp"
         android:background="@color/colorPrimaryLight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/q2answer"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 </androidx.constraintlayout.widget.ConstraintLayout>
