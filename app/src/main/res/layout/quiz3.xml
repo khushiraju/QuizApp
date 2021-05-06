@@ -106,7 +106,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="29dp"
         android:background="@color/colorPrimary2"
-        android:text="Leave it. I never clean my room! Cleaning sucks."
+        android:text="Don't clean"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/q2option2"
         app:layout_constraintHorizontal_bias="1.0"
