@@ -16,11 +16,8 @@ public class QuizResultsActivity extends AppCompatActivity {
         // get intent from quiz page
         Intent intent = getIntent();
 
-        //String message = intent.getStringExtra(Quiz2Activity.FINAL_ANSWER);
-
         String message = intent.getStringExtra(Quiz2Activity.FINAL_ANSWER2);
         TextView textView = findViewById(R.id.q2answer);
-        TextView textView = findViewById(R.id.q1answer);
         textView.setText(message);
 
         String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
