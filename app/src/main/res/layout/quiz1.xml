@@ -23,8 +23,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="17dp"
@@ -51,35 +51,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q1option2" />
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="155dp"
         android:layout_height="100dp"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="128dp"
         android:layout_marginBottom="29dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="0.866"
         tools:srcCompat="@drawable/bow_png" />
-
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="302dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="15dp"
         android:fontFamily="monospace"
         android:text="Someone in the group proposes an idea you disagree with. You..."
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q3option2"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/q3option1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q2option2" />
 
     <Button
@@ -89,7 +87,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="77dp"
         android:background="@color/colorPrimary"
-        android:text="Interrupt them and say that you are busy right now"
+        android:text="Interrupt them"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/q1option2"
@@ -104,7 +102,7 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
-        android:text="Give your undivided attention and do not interrupt them"
+        android:text="Give your undivided"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
@@ -119,30 +117,30 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="77dp"
         android:background="@color/colorPrimary"
-        android:text="    You defend your view point and tell them why they are wrong "
+        android:text="You defend your view point"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/q3option2"
         app:layout_constraintEnd_toStartOf="@+id/q3option2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/q3option2" />
+        app:layout_constraintTop_toTopOf="@+id/q3option2"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <Button
         android:id="@+id/q2option1"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="81dp"
         android:layout_marginEnd="77dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginBottom="44dp"
         android:background="@color/colorPrimary"
-        android:text="Complain loudly and walk up to the server every 5 minutes"
+        android:text="Complain loudly"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toStartOf="@+id/q2option2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q1option1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/q3option2"
@@ -151,14 +149,13 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="23dp"
         android:background="@color/colorPrimary"
-        android:text="You don't dare to contradict them"
+        android:text="You don't contradict them"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/q3option1"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
 
     <Button
         android:id="@+id/q2option2"
@@ -167,7 +164,7 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="17dp"
         android:background="@color/colorPrimary"
-        android:text="You are getting angry but you wait patiently and do not speak up "
+        android:text="Wait patiently"
         android:textColor="#FFFFFF"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
