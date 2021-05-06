@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class QuizResultsActivity extends AppCompatActivity {
@@ -28,7 +29,10 @@ public class QuizResultsActivity extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.q3answer);
         textView3.setText(message3);
 
+    }
 
-
+    public void backButton(View view) {
+        Intent intent = new Intent(this, ChooseQuizActivity.class);
+        startActivity(intent);
     }
 }
