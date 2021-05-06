@@ -12,12 +12,14 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="36dp"
         android:background="@color/colorPrimary3"
         android:onClick="submitResults"
         android:text="GO!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/q3option2"
         app:layout_constraintStart_toEndOf="@+id/q3option1" />
 
     <TextView
@@ -35,7 +37,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="Which activity do you prefer?"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,10 +62,11 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="Which color do you prefer?"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q2option1" />
 
@@ -72,13 +75,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimaryMed"
+        android:background="@color/colorPrimary3"
         android:fontFamily="monospace"
         android:text="12AM"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/q2option1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -86,7 +90,7 @@
         android:id="@+id/q3option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="49dp"
         android:background="@color/colorPrimary3"
@@ -94,12 +98,13 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.488" />
 
     <Button
         android:id="@+id/q2option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="129dp"
+        android:layout_height="54dp"
         android:layout_marginEnd="20dp"
         android:background="@color/colorPrimary3"
         android:text="MIDNIGHT MOVIE"
@@ -113,12 +118,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="46dp"
         android:background="@color/colorPrimary3"
         android:text="10AM"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/q2option1"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -126,19 +132,20 @@
         android:id="@+id/q3option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="34dp"
+        android:layout_marginEnd="88dp"
         android:background="@color/colorPrimary3"
         android:text="BABY BLUE"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/q3option1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/q3option1" />
+        app:layout_constraintTop_toTopOf="@+id/q3option1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/q2option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="6dp"
         android:background="@color/colorPrimary3"
         android:text="MORNING RUN"
