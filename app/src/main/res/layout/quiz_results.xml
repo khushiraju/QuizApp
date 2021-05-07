@@ -11,7 +11,7 @@
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="57dp"
         android:layout_marginEnd="59dp"
         android:background="@color/colorPrimaryLight"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,12 +23,14 @@
         android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="59dp"
-        android:layout_marginBottom="66dp"
+        android:layout_marginBottom="136dp"
         android:background="@color/colorPrimaryLight"
-        app:layout_constraintBottom_toTopOf="@+id/q2answer"
+        app:layout_constraintBottom_toTopOf="@+id/q3answer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/q2answer"
+        app:layout_constraintTop_toTopOf="@+id/q1answer"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -36,46 +38,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="monospace"
         android:text="Quiz Results"
         android:textColor="@android:color/black"
         android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/q3answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="53dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/q2answer"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/q1answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
         android:layout_marginEnd="53dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
         app:layout_constraintEnd_toStartOf="@+id/imageButton6"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="81dp"
+        android:layout_marginBottom="350dp"
         android:scaleType="fitCenter"
         android:src="@drawable/bow_png"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/q1answer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -83,29 +88,29 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_marginStart="36dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="81dp"
         android:scaleType="fitCenter"
         android:src="@drawable/cloud_png"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/q2answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="98dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="184dp"
         android:background="@color/colorPrimaryLight"
         android:onClick="backButton"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imageedit_3_3913943665" />
@@ -115,35 +120,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="53dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginBottom="1dp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+        app:layout_constraintStart_toEndOf="@+id/imageView4" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_marginStart="36dp"
         android:layout_marginEnd="81dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="52dp"
         android:scaleType="fitCenter"
         android:src="@drawable/cake_png"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/q2answer"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/q3answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="59dp"
-        android:layout_marginBottom="111dp"
         android:background="@color/colorPrimaryLight"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/q2answer"
+        app:layout_constraintStart_toEndOf="@+id/q3answer"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 </androidx.constraintlayout.widget.ConstraintLayout>
