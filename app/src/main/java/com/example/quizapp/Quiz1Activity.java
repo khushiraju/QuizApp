@@ -144,18 +144,54 @@ public class Quiz1Activity extends AppCompatActivity {
 
     public void getAnswers(View answer) {
 
+        // maybe change to findViewById? 
+        
         String choice = answer.getResources().getResourceName(answer.getId());
 
+        
 
         if (choice.contains("option1")) {
-
+            // if (extrovert.size() > 0) {
             extrovert.add(choice);
         }
-
+   
+         
         else {
 
             introvert.add(choice);
         }
 
     }
+    
+    //public void cleanUpList(ArrayList<String> answerList, String choice)  {
+        
+    //1. what do we need to do? make sure that if a button is pressed twice, it does not get added to the array twice
+    //2. If user wants to CHANGE their answer, then their answer for that question needs to be removed from one list and put in the other.
+    
+    // for (int i = 0; i < answerList.size(); i++) {
+         
+       //q1option1
+         
+        // if (answerList.get(i).substring(0,2).equals(choice.substring(0,2))){
+             
+            // if (!answerList.get(i).substring(2).equals(choice.substring(2))) {
+                 
+                // answerList.set(i, choice);
+                 
+            
+                 
+            // }
+             
+             
+             
+             
+       //  }
+         
+         
+    // }
+        
+        
+        
+   // }
+  
     }
