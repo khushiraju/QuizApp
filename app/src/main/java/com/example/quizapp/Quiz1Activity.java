@@ -174,8 +174,7 @@ public class Quiz1Activity extends AppCompatActivity {
         else if (choice.contains("option2")) {
 
             fillArrays(choice, introvert, extrovert);
-
-
+            
         }
 
 
@@ -203,76 +202,19 @@ public class Quiz1Activity extends AppCompatActivity {
 
                           if (oppositeArray.get(j).contains(choice.substring(0, 2))) {
 
-
                               oppositeArray.remove(j);
                               break;
 
                           }
 
-
                       }
-
-
                   }
 
                   if (count == 0) {
-
                       correspondingArray.add(choice);
                   }
               }
-
-          /*
-           else {
-
-              if (extrovert.size() == 0 && introvert.size() == 0) {
-                  introvert.add(choice);
-              }
-              //in this loop, we check to see if the answer choice has not already been selected.
-              //count increased if the SAME item is trying to be added twice
-              for (int i = 0; i < introvert.size(); i++) {
-
-                  if (introvert.get(i).equals(choice)) {
-                      count++;
-                      break;
-                  }
-              }
-
-              //here, we check to see if the QUESTION has been answered by seeing if an opposite answer was put into
-              // the other list. if the user CHANGES their answer to a question, then REMOVE the answer that was
-              //previously stored from one of the lists and add the MOST RECENT answer choice to the correct list.
-              //count increased if the values need to be SWITCHED.
-              if (count == 0) {
-                  for (int j = 0; j < extrovert.size(); j++) {
-
-                      if (extrovert.get(j).contains(choice.substring(0, 2))) {
-
-
-                          extrovert.remove(j);
-                          break;
-
-                      }
-
-
-                  }
-
-
-              }
-
-              if (count == 0) {
-
-                  introvert.add(choice);
-              }
-          }
-
-
-
-            */
-
-
-
-
       }
-
 
     }
 
