@@ -1,14 +1,24 @@
 package com.example.quizapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ChooseQuizActivity extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +27,7 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
         // Get the Intent that started this activity and extract the string
         // receive intent from quiz1 screen
+        mAuth = FirebaseAuth.getInstance();
         Intent intent = getIntent();
 
 
@@ -70,8 +81,12 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
     public void signOut (View view ) {
 
+
         Intent intent = new Intent (this, MainActivity.class);
+        mAuth.signOut();
+        //Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
+
 
 
     }

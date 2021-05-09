@@ -42,8 +42,6 @@ public class CreateAccountActivity extends AppCompatActivity {
     // reference to entire database
     private FirebaseFirestore db;
 
-
-
     private FirebaseAuth mAuth;
 
         //private FirebaseUser currentUser;
@@ -96,6 +94,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
+        Intent intent = new Intent(this, ChooseQuizActivity.class);
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -103,12 +102,15 @@ public class CreateAccountActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
+                            Toast.makeText(CreateAccountActivity.this, "Login Successful!",
+                                    Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(intent);
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(CreateAccountActivity.this, "Authentication failed.",
+                            Toast.makeText(CreateAccountActivity.this, "Login Failed",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
@@ -135,9 +137,9 @@ public class CreateAccountActivity extends AppCompatActivity {
         createAccount(userEmail, userPassword);
         signIn(userEmail, userPassword);
 
-        Intent intent = new Intent(this, ChooseQuizActivity.class);
+        // we only want to go to the next page IF the signin is succesful. otherwise, it should dispaly the toast.
+        //Intent intent = new Intent(this, ChooseQuizActivity.class);
 
-        startActivity(intent);
 
     }
 

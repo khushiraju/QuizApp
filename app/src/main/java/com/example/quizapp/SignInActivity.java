@@ -46,17 +46,16 @@ public class SignInActivity extends AppCompatActivity {
 
         String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
-
-        Intent intent = new Intent(this, ChooseQuizActivity.class);
         signIn(userEmail, userPassword);
 
 
-        startActivity(intent);
+
 
     }
 
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
+        Intent intent = new Intent(this, ChooseQuizActivity.class);
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -65,11 +64,14 @@ public class SignInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Toast.makeText(SignInActivity.this, "Login Successful!",
+                                    Toast.LENGTH_SHORT).show();
+                            startActivity(intent);
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(SignInActivity.this, "Authentication failed.",
+                            Toast.makeText(SignInActivity.this, "Incorrect email or password. Please try again.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
