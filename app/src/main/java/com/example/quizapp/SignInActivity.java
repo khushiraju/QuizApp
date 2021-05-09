@@ -55,8 +55,6 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
-
-
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
@@ -79,6 +77,7 @@ public class SignInActivity extends AppCompatActivity {
                 });
         // [END sign_in_with_email]
     }
+
 
     private void reload() { }
 

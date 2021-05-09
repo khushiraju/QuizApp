@@ -174,7 +174,7 @@ public class Quiz1Activity extends AppCompatActivity {
         else if (choice.contains("option2")) {
 
             fillArrays(choice, introvert, extrovert);
-            
+
         }
 
 
