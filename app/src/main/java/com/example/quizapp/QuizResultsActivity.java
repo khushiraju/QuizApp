@@ -54,32 +54,37 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         // get intent from quiz page
         Intent intent = getIntent();
+
         TextView textView1 = findViewById(R.id.q1answer);
         TextView textView2 = findViewById(R.id.q2answer);
         TextView textView3 = findViewById(R.id.q3answer);
 
         String message2 = intent.getStringExtra(Quiz2Activity.FINAL_ANSWER2);
+        String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
+        String message3 = intent.getStringExtra(Quiz3Activity.FINAL_ANSWER3);
+
+        String showText = message2;
+        String showText1 = message1;
+        String showText2 = message3;
+
+
         if (message2.equals("Night Owl") || message2.equals("Morning Bird")) {
-            String showText = message2;
+
             textView2.setText(showText);
 
         }
 
-        String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
 
         if (message1.equals("Introvert") || message1.equals("Extrovert")) {
 
-            String showText1 = message1;
             textView1.setText(showText1);
 
         }
 
 
-        String message3 = intent.getStringExtra(Quiz3Activity.FINAL_ANSWER3);
 
         if (message3.equals("Active") || message3.equals("Lazy")) {
 
-            String showText2 = message3;
             textView3.setText(showText2);
 
         }
