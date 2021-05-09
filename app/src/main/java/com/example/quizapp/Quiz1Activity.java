@@ -168,14 +168,14 @@ public class Quiz1Activity extends AppCompatActivity {
 
         if (choice.contains("option1")){
 
-            fillArrays(choice);
+            fillArrays(choice, extrovert, introvert);
 
         }
         else if (choice.contains("option2")) {
 
-            fillArrays(choice)
+            fillArrays(choice, introvert, extrovert);
 
-            
+
         }
 
 
@@ -185,32 +185,26 @@ public class Quiz1Activity extends AppCompatActivity {
       public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
 
           int count = 0;
-          if (choice.contains("option1")) {
-              if (extrovert.size() == 0 && introvert.size() == 0) {
-                  extrovert.add(choice);
-              } else {
 
-                  //in this loop, we check to see if the answer choice has not already been selected.
-                  //count increased if the SAME item is trying to be added twice
-                  for (int i = 0; i < extrovert.size(); i++) {
+          if (correspondingArray.size() == 0 && oppositeArray.size() == 0) {
+                  correspondingArray.add(choice);
+          } else {
 
-                      if (extrovert.get(i).equals(choice)) {
+                  for (int i = 0; i < correspondingArray.size(); i++) {
+
+                      if (correspondingArray.get(i).equals(choice)) {
                           count++;
                           break;
                       }
                   }
 
-                  //here, we check to see if the QUESTION has been answered by seeing if an opposite answer was put into
-                  // the other list. if the user CHANGES their answer to a question, then REMOVE the answer that was
-                  //previously stored from one of the lists and add the MOST RECENT answer choice to the correct list.
-                  //count increased if the values need to be SWITCHED.
                   if (count == 0) {
-                      for (int j = 0; j < introvert.size(); j++) {
+                      for (int j = 0; j < oppositeArray.size(); j++) {
 
-                          if (introvert.get(j).contains(choice.substring(0, 2))) {
+                          if (oppositeArray.get(j).contains(choice.substring(0, 2))) {
 
 
-                              introvert.remove(j);
+                              oppositeArray.remove(j);
                               break;
 
                           }
@@ -223,10 +217,12 @@ public class Quiz1Activity extends AppCompatActivity {
 
                   if (count == 0) {
 
-                      extrovert.add(choice);
+                      correspondingArray.add(choice);
                   }
               }
-          } else {
+
+          /*
+           else {
 
               if (extrovert.size() == 0 && introvert.size() == 0) {
                   introvert.add(choice);
@@ -270,23 +266,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            */
 
 
 
