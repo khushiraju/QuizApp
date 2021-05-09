@@ -38,9 +38,7 @@ public class QuizResultsActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    TextView textView1 = findViewById(R.id.q1answer);
-    TextView textView2 = findViewById(R.id.q2answer);
-    TextView textView3 = findViewById(R.id.q3answer);
+
 
 
 
@@ -56,11 +54,14 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         // get intent from quiz page
         Intent intent = getIntent();
+        TextView textView1 = findViewById(R.id.q1answer);
+        TextView textView2 = findViewById(R.id.q2answer);
+        TextView textView3 = findViewById(R.id.q3answer);
 
         String message2 = intent.getStringExtra(Quiz2Activity.FINAL_ANSWER2);
         if (message2.equals("Night Owl") || message2.equals("Morning Bird")) {
-
-            textView2.setText(message2);
+            String showText = message2;
+            textView2.setText(showText);
 
         }
 
@@ -68,8 +69,8 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         if (message1.equals("Introvert") || message1.equals("Extrovert")) {
 
-
-            textView1.setText(message1);
+            String showText1 = message1;
+            textView1.setText(showText1);
 
         }
 
@@ -78,8 +79,8 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         if (message3.equals("Active") || message3.equals("Lazy")) {
 
-
-            textView3.setText(message3);
+            String showText2 = message3;
+            textView3.setText(showText2);
 
         }
 
