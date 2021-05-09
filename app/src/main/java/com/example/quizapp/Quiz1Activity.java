@@ -19,7 +19,6 @@ public class Quiz1Activity extends AppCompatActivity {
     public String finalString = " ";
 
 
-
     @Override
 
 
@@ -30,7 +29,6 @@ public class Quiz1Activity extends AppCompatActivity {
 
         Button q1o1, q1o2, q2o1, q2o2, q3o1, q3o2;
         //final ConstraintLayout constraintLayout;
-
 
 
         q1o1 = findViewById(R.id.q1option1);
@@ -116,18 +114,15 @@ public class Quiz1Activity extends AppCompatActivity {
     // get text IDS for each of the buttons, need an indication when to
 
 
-
-
     // goes to quiz results page. still need to go back and add code so we can take information from it.
 
     public void submitResults(View view) {
 
-        if (extrovert.size() > introvert.size() ) {
+        if (extrovert.size() > introvert.size()) {
 
             finalString = "Extrovert";
 
-        }
-        else {
+        } else {
 
             finalString = "Introvert";
         }
@@ -135,63 +130,170 @@ public class Quiz1Activity extends AppCompatActivity {
         extrovert.clear();
         introvert.clear();
 
-        Intent intent = new Intent (this, QuizResultsActivity.class);
+        Intent intent = new Intent(this, QuizResultsActivity.class);
         intent.putExtra(FINAL_ANSWER1, finalString);
         startActivity(intent);
     }
 
     // ROUGH SKETCH FOR WHAT THE QUIZ CODE WILL LOOK LIKE
 
+    /*
+    1. When a button for an answer choice is pressed, we need to make sure that that the button has not been clicked
+    before. If it has, we need to make sure that it doesn't get added again.
+    2. We also need to make sure that you can change your answer to a question. To do this, we need to check the corresponding
+    list and the OTHER list. If the question has already been answered but the answer is for the opposite answer choice
+    (in the opposite list, then we need to remove the element for that question from the other list and put it in the list
+    for the button they MOST recently pressed.
+    3. ok, but when CAN we add an answer to the list? we can add answer to the list when it is NOT in the list, and there is not
+    already an answer to that question., or if the length of the list is 0.
+
+    CODE PLAN:
+
+
+    i think i need to make a whole new method to call in getAnswers UGH
+
+
+
+    https://www.codegrepper.com/code-examples/java/android+studio+get+id+name+from+view
+
+
+     */
+
     public void getAnswers(View answer) {
 
-        // maybe change to findViewById? 
-        
-        String choice = answer.getResources().getResourceName(answer.getId());
+        // what is getResourceName vs. getResourceEntryName
+        String choice = answer.getResources().getResourceEntryName(answer.getId());
 
-        
+        //pseudo code:
 
-        if (choice.contains("option1")) {
-            // if (extrovert.size() > 0) {
-            extrovert.add(choice);
+        if (choice.contains("option1")){
+
+            fillArrays(choice);
+
         }
-   
-         
-        else {
+        else if (choice.contains("option2")) {
 
-            introvert.add(choice);
-        }
+            fillArrays(choice)
 
-    }
-    
-    //public void cleanUpList(ArrayList<String> answerList, String choice)  {
-        
-    //1. what do we need to do? make sure that if a button is pressed twice, it does not get added to the array twice
-    //2. If user wants to CHANGE their answer, then their answer for that question needs to be removed from one list and put in the other.
-    
-    // for (int i = 0; i < answerList.size(); i++) {
-         
-       //q1option1
-         
-        // if (answerList.get(i).substring(0,2).equals(choice.substring(0,2))){
-             
-            // if (!answerList.get(i).substring(2).equals(choice.substring(2))) {
-                 
-                // answerList.set(i, choice);
-                 
             
-                 
-            // }
-             
-             
-             
-             
-       //  }
-         
-         
-    // }
-        
-        
-        
-   // }
-  
+        }
+
+
+        }
+
+
+      public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
+
+          int count = 0;
+          if (choice.contains("option1")) {
+              if (extrovert.size() == 0 && introvert.size() == 0) {
+                  extrovert.add(choice);
+              } else {
+
+                  //in this loop, we check to see if the answer choice has not already been selected.
+                  //count increased if the SAME item is trying to be added twice
+                  for (int i = 0; i < extrovert.size(); i++) {
+
+                      if (extrovert.get(i).equals(choice)) {
+                          count++;
+                          break;
+                      }
+                  }
+
+                  //here, we check to see if the QUESTION has been answered by seeing if an opposite answer was put into
+                  // the other list. if the user CHANGES their answer to a question, then REMOVE the answer that was
+                  //previously stored from one of the lists and add the MOST RECENT answer choice to the correct list.
+                  //count increased if the values need to be SWITCHED.
+                  if (count == 0) {
+                      for (int j = 0; j < introvert.size(); j++) {
+
+                          if (introvert.get(j).contains(choice.substring(0, 2))) {
+
+
+                              introvert.remove(j);
+                              break;
+
+                          }
+
+
+                      }
+
+
+                  }
+
+                  if (count == 0) {
+
+                      extrovert.add(choice);
+                  }
+              }
+          } else {
+
+              if (extrovert.size() == 0 && introvert.size() == 0) {
+                  introvert.add(choice);
+              }
+              //in this loop, we check to see if the answer choice has not already been selected.
+              //count increased if the SAME item is trying to be added twice
+              for (int i = 0; i < introvert.size(); i++) {
+
+                  if (introvert.get(i).equals(choice)) {
+                      count++;
+                      break;
+                  }
+              }
+
+              //here, we check to see if the QUESTION has been answered by seeing if an opposite answer was put into
+              // the other list. if the user CHANGES their answer to a question, then REMOVE the answer that was
+              //previously stored from one of the lists and add the MOST RECENT answer choice to the correct list.
+              //count increased if the values need to be SWITCHED.
+              if (count == 0) {
+                  for (int j = 0; j < extrovert.size(); j++) {
+
+                      if (extrovert.get(j).contains(choice.substring(0, 2))) {
+
+
+                          extrovert.remove(j);
+                          break;
+
+                      }
+
+
+                  }
+
+
+              }
+
+              if (count == 0) {
+
+                  introvert.add(choice);
+              }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+
+
     }
+
+
