@@ -63,19 +63,18 @@ public class QuizResultsActivity extends AppCompatActivity {
         String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
         String message3 = intent.getStringExtra(Quiz3Activity.FINAL_ANSWER3);
 
-        String showText = message2;
-        String showText1 = message1;
-        String showText2 = message3;
+
 
 
         if (message2.equals("Night Owl") || message2.equals("Morning Bird")) {
-
+            String showText = message2;
             textView2.setText(showText);
 
         }
 
 
-        if (message1.equals("Introvert") || message1.equals("Extrovert")) {
+        else if (message1.equals("Introvert") || message1.equals("Extrovert")) {
+            String showText1 = message1;
 
             textView1.setText(showText1);
 
@@ -83,7 +82,8 @@ public class QuizResultsActivity extends AppCompatActivity {
 
 
 
-        if (message3.equals("Active") || message3.equals("Lazy")) {
+        else if (message3.equals("Active") || message3.equals("Lazy")) {
+            String showText2 = message3;
 
             textView3.setText(showText2);
 
