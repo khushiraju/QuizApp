@@ -64,6 +64,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.q3answer);
         textView3.setText(message3);
 
+        addEvent();
 
     }
 
