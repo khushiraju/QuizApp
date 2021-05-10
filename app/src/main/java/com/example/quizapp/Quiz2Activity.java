@@ -136,9 +136,9 @@ public class Quiz2Activity extends AppCompatActivity {
         nightOwl.clear();
         morningBird.clear();
 
-        Intent intent = new Intent (this, QuizResultsActivity2.class);
-        intent.putExtra(FINAL_ANSWER2, finalString);
-        startActivity(intent);
+        Intent intent2 = new Intent (this, QuizResultsActivity2.class);
+        intent2.putExtra(FINAL_ANSWER2, finalString);
+        startActivity(intent2);
     }
 
 
