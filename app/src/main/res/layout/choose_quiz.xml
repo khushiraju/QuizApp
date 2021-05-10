@@ -54,7 +54,7 @@
         android:fontFamily="monospace"
         android:text="Click on an image to choose a quiz"
         android:textAlignment="center"
-        android:textColor="#92000000"
+        android:textColor="#000000"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

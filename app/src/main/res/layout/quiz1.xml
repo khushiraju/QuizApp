@@ -32,6 +32,7 @@
         android:fontFamily="monospace"
         android:text="You have a busy day at school and a friend comes to talk to you about their life problems. You..."
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/q1option2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,7 @@
         android:text="You are sitting in a restaraunt and it has been 45 minutes and your food has not come. You..."
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q2option2"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q1option2" />
@@ -79,6 +81,7 @@
         app:layout_constraintBottom_toTopOf="@+id/q3option2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@+id/q2option2" />
 
     <Button
