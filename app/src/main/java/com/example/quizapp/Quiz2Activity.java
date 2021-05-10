@@ -121,7 +121,7 @@ public class Quiz2Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void submitResults(View view) {
+    public void submitResults2(View view) {
 
         if (nightOwl.size() > morningBird.size() ) {
 
@@ -136,7 +136,7 @@ public class Quiz2Activity extends AppCompatActivity {
         nightOwl.clear();
         morningBird.clear();
 
-        Intent intent = new Intent (this, QuizResultsActivity.class);
+        Intent intent = new Intent (this, QuizResultsActivity2.class);
         intent.putExtra(FINAL_ANSWER2, finalString);
         startActivity(intent);
     }

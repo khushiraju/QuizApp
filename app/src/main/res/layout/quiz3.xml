@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryLight2"
-    tools:context=".Quiz1Activity">
+    tools:context=".Quiz3Activity">
 
     <Button
         android:id="@+id/button13"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary2"
         android:fontFamily="monospace"
-        android:onClick="submitResults"
+        android:onClick="submitResults3"
         android:text="GO!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

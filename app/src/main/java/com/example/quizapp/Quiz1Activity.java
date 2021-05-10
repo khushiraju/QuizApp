@@ -127,13 +127,18 @@ public class Quiz1Activity extends AppCompatActivity {
             finalString = "Introvert";
         }
 
+        //addEvent();
+
         extrovert.clear();
         introvert.clear();
 
         Intent intent = new Intent(this, QuizResultsActivity.class);
         intent.putExtra(FINAL_ANSWER1, finalString);
+
         startActivity(intent);
     }
+
+
 
     // ROUGH SKETCH FOR WHAT THE QUIZ CODE WILL LOOK LIKE
 

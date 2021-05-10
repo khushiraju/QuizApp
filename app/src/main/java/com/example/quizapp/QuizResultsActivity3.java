@@ -22,8 +22,8 @@ import org.w3c.dom.Text;
 import java.util.HashMap;
 import java.util.Map;
 
-public class QuizResultsActivity extends AppCompatActivity {
-    public final String TAG = "QuizResultsActivity";
+public class QuizResultsActivity3 extends AppCompatActivity {
+    public final String TAG = "QuizResultsActivity3";
 
 
     // Constants to use for labels in database
@@ -39,10 +39,15 @@ public class QuizResultsActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
 
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quiz_results);
+        setContentView(R.layout.quiz_results3);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -50,15 +55,20 @@ public class QuizResultsActivity extends AppCompatActivity {
         // get intent from quiz page
         Intent intent = getIntent();
 
-        TextView textView1 = findViewById(R.id.q1answer);
 
-        String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
+        TextView textView3 = findViewById(R.id.q3answer);
 
-        //textView1.setText(R.string.quiz1String);
 
-        if (message1.equals("Introvert") || message1.equals("Extrovert")) {
-            textView1.setText(message1);
-        }
+        String message3 = intent.getStringExtra(Quiz3Activity.FINAL_ANSWER3);
+
+
+        //if (message3.equals("Active") || message3.equals("Lazy")) {
+        textView3.setText(message3);
+
+        //}
+
+
+        //addEvent();
 
     }
 

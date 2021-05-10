@@ -107,7 +107,7 @@ public class Quiz3Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void submitResults(View view) {
+    public void submitResults3(View view) {
 
         if (active.size() > lazy.size() ) {
 
@@ -122,7 +122,7 @@ public class Quiz3Activity extends AppCompatActivity {
         active.clear();
         lazy.clear();
 
-        Intent intent = new Intent (this, QuizResultsActivity.class);
+        Intent intent = new Intent (this, QuizResultsActivity3.class);
         intent.putExtra(FINAL_ANSWER3, finalString);
         startActivity(intent);
     }
