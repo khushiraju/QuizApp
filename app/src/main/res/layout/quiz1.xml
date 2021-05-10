@@ -12,7 +12,7 @@
         android:id="@+id/submit"
         android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/colorPrimary"
         android:onClick="submitResults"
         android:text="GO!"
@@ -34,7 +34,6 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/q1option2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -44,7 +43,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="9dp"
         android:fontFamily="monospace"
         android:text="You are sitting in a restaraunt and it has been 45 minutes and your food has not come. You..."
         android:textAlignment="center"
@@ -116,19 +115,17 @@
     <Button
         android:id="@+id/q3option1"
         android:layout_width="0dp"
-        android:layout_height="51dp"
+        android:layout_height="0dp"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="76dp"
         android:layout_marginEnd="54dp"
-        android:layout_marginBottom="76dp"
         android:background="@color/colorPrimary"
         android:text="You defend your view point"
         android:textColor="#FFFFFF"
         android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="@+id/submit"
+        app:layout_constraintBottom_toBottomOf="@+id/q3option2"
         app:layout_constraintEnd_toStartOf="@+id/q3option2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q2option1" />
+        app:layout_constraintTop_toTopOf="@+id/q3option2" />
 
     <Button
         android:id="@+id/q2option1"
@@ -150,7 +147,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="28dp"
         android:background="@color/colorPrimary"
         android:text="You don't contradict them"
         android:textColor="#FFFFFF"
@@ -165,7 +162,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/colorPrimary"
         android:text="Wait patiently"
         android:textColor="#FFFFFF"
@@ -177,8 +174,8 @@
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="46dp"
