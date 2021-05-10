@@ -1,5 +1,12 @@
 <resources>
     <string name="teacher">Denna</string>
     <string name="app_name"></string>
-    <string name="student">Anika</string>
+    <string name = "quiz1String">Take Quiz to View Answer</string>
+    <string name = "quiz2String">Take Quiz to View Answer</string>
+    <string name = "quiz3String">Take Quiz to View Answer</string>
+
+
+
+
+
 </resources>

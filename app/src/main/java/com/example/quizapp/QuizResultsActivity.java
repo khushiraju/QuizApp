@@ -63,6 +63,10 @@ public class QuizResultsActivity extends AppCompatActivity {
         String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
         String message3 = intent.getStringExtra(Quiz3Activity.FINAL_ANSWER3);
 
+        textView1.setText(R.string.quiz1String);
+        textView2.setText(R.string.quiz2String);
+        textView3.setText(R.string.quiz3String);
+
 
 
 
