@@ -149,14 +149,50 @@ public class Quiz2Activity extends AppCompatActivity {
 
         if (choice.contains("option1")) {
 
-        nightOwl.add(choice);
+            fillArrays(choice, nightOwl, morningBird);
         }
 
-        else {
+        else if (choice.contains("option2")) {
 
-        morningBird.add(choice);
+            fillArrays(choice, morningBird, nightOwl);
+
         }
 
+    }
+
+    public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
+
+        int count = 0;
+
+        if (correspondingArray.size() == 0 && oppositeArray.size() == 0) {
+            correspondingArray.add(choice);
+        } else {
+
+            for (int i = 0; i < correspondingArray.size(); i++) {
+
+                if (correspondingArray.get(i).equals(choice)) {
+                    count++;
+                    break;
+                }
+            }
+
+            if (count == 0) {
+                for (int j = 0; j < oppositeArray.size(); j++) {
+
+                    if (oppositeArray.get(j).contains(choice.substring(0, 2))) {
+
+                        oppositeArray.remove(j);
+                        break;
+
+                    }
+
+                }
+            }
+
+            if (count == 0) {
+                correspondingArray.add(choice);
+            }
+        }
     }
 
 

@@ -127,7 +127,6 @@ public class Quiz3Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public void getAnswers(View answer) {
 
         String choice = answer.getResources().getResourceName(answer.getId());
@@ -135,13 +134,50 @@ public class Quiz3Activity extends AppCompatActivity {
 
         if (choice.contains("option1")) {
 
-            active.add(choice);
+            fillArrays(choice, lazy, active);
         }
 
-        else {
+        else if (choice.contains("option2")) {
 
-            lazy.add(choice);
+            fillArrays(choice, active, lazy);
+
         }
 
     }
+
+    public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
+
+        int count = 0;
+
+        if (correspondingArray.size() == 0 && oppositeArray.size() == 0) {
+            correspondingArray.add(choice);
+        } else {
+
+            for (int i = 0; i < correspondingArray.size(); i++) {
+
+                if (correspondingArray.get(i).equals(choice)) {
+                    count++;
+                    break;
+                }
+            }
+
+            if (count == 0) {
+                for (int j = 0; j < oppositeArray.size(); j++) {
+
+                    if (oppositeArray.get(j).contains(choice.substring(0, 2))) {
+
+                        oppositeArray.remove(j);
+                        break;
+
+                    }
+
+                }
+            }
+
+            if (count == 0) {
+                correspondingArray.add(choice);
+            }
+        }
+    }
+
 }

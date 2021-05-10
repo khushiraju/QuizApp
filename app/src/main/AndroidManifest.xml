@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
         <activity android:name=".QuizResultsActivity"></activity>
+        <activity android:name=".QuizResultsActivity2"></activity>
+        <activity android:name=".QuizResultsActivity3"></activity>
         <activity android:name=".Quiz3Activity" />
         <activity android:name=".Quiz2Activity" />
         <activity android:name=".Quiz1Activity" />
