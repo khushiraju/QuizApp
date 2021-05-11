@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -109,27 +110,36 @@ public class Quiz3Activity extends AppCompatActivity {
 
     public void submitResults3(View view) {
 
-        if (active.size() > lazy.size() ) {
+        if (isComplete(lazy, active) == true) {
 
-            finalString = "Active";
+            if (active.size() > lazy.size()) {
 
-        }
+                finalString = "Active";
+
+            } else {
+
+                finalString = "Lazy";
+            }
+
+            active.clear();
+            lazy.clear();
+
+            Intent intent = new Intent(this, QuizResultsActivity3.class);
+            intent.putExtra(FINAL_ANSWER3, finalString);
+            startActivity(intent);
+
+       }
         else {
 
-            finalString = "Lazy";
-        }
+            Toast.makeText(Quiz3Activity.this, "Please answer all questions!",
+                    Toast.LENGTH_SHORT).show();
 
-        active.clear();
-        lazy.clear();
-
-        Intent intent = new Intent (this, QuizResultsActivity3.class);
-        intent.putExtra(FINAL_ANSWER3, finalString);
-        startActivity(intent);
-    }
+      }
+   }
 
     public void getAnswers(View answer) {
 
-        String choice = answer.getResources().getResourceName(answer.getId());
+        String choice = answer.getResources().getResourceEntryName(answer.getId());
 
 
         if (choice.contains("option1")) {
@@ -161,6 +171,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }
             }
 
+
             if (count == 0) {
                 for (int j = 0; j < oppositeArray.size(); j++) {
 
@@ -178,6 +189,55 @@ public class Quiz3Activity extends AppCompatActivity {
                 correspondingArray.add(choice);
             }
         }
+    }
+
+
+    public boolean isComplete(ArrayList <String> list1, ArrayList <String> list2){
+
+
+        //we want to check that ALL of the questions have been answered. SO if one question already HAS an answer,
+
+        int questionTracker = 0;
+
+        if (list1.size() > 0) {
+            for (int i = 0; i < list1.size(); i++) {
+
+                if (list1.get(i).contains("q1") || list1.get(i).contains("q2") || list1.get(i).contains("q3")) {
+
+                    questionTracker++;
+
+                }
+
+            }
+
+        }
+
+        if (list2.size() > 0) {
+
+            for (int i = 0; i < list2.size(); i++) {
+
+
+                if (list2.get(i).contains("q1") || list2.get(i).contains("q2") || list2.get(i).contains("q3")) {
+
+                    questionTracker++;
+
+                }
+
+            }
+
+        }
+
+        if (questionTracker < 3) {
+
+            return false;
+
+        }
+
+        else {
+
+            return true;
+        }
+
     }
 
 }

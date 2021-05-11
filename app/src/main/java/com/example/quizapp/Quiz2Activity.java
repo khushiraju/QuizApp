@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -123,28 +124,37 @@ public class Quiz2Activity extends AppCompatActivity {
 
     public void submitResults2(View view) {
 
-        if (nightOwl.size() > morningBird.size() ) {
 
-            finalString = "Night Owl";
+        if (isComplete(nightOwl, morningBird)) {
 
+            if (nightOwl.size() > morningBird.size()) {
+
+                finalString = "Night Owl";
+
+            } else {
+
+                finalString = "Morning Bird";
+            }
+
+            nightOwl.clear();
+            morningBird.clear();
+
+            Intent intent2 = new Intent(this, QuizResultsActivity2.class);
+            intent2.putExtra(FINAL_ANSWER2, finalString);
+            startActivity(intent2);
         }
         else {
 
-            finalString = "Morning Bird";
+            Toast.makeText(Quiz2Activity.this, "Please answer all questions!",
+                    Toast.LENGTH_SHORT).show();
         }
 
-        nightOwl.clear();
-        morningBird.clear();
-
-        Intent intent2 = new Intent (this, QuizResultsActivity2.class);
-        intent2.putExtra(FINAL_ANSWER2, finalString);
-        startActivity(intent2);
     }
 
 
     public void getAnswers(View answer) {
 
-        String choice = answer.getResources().getResourceName(answer.getId());
+        String choice = answer.getResources().getResourceEntryName(answer.getId());
 
 
         if (choice.contains("option1")) {
@@ -193,6 +203,59 @@ public class Quiz2Activity extends AppCompatActivity {
                 correspondingArray.add(choice);
             }
         }
+    }
+
+    public boolean isComplete(ArrayList <String> list1, ArrayList <String> list2){
+
+
+        //we want to check that ALL of the questions have been answered. SO if one question already HAS an answer,
+
+        int questionTracker = 0;
+
+        if (list1.size() > 0) {
+            for (int i = 0; i < list1.size(); i++) {
+
+                if (list1.get(i).contains("q1") || list1.get(i).contains("q2") || list1.get(i).contains("q3")) {
+
+                    questionTracker++;
+
+                }
+
+            }
+
+        }
+
+        else if (list2.size() > 0) {
+
+            for (int i = 0; i < list1.size(); i++) {
+
+
+                if (list2.get(i).contains("q1") || list2.get(i).contains("q2") || list2.get(i).contains("q3")) {
+
+                    questionTracker++;
+
+                }
+
+            }
+
+        }
+
+
+        if (questionTracker < 3) {
+
+            return false;
+
+
+        }
+
+        else {
+
+            return true;
+        }
+
+
+
+
     }
 
 
