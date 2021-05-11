@@ -140,12 +140,15 @@ public class Quiz1Activity extends AppCompatActivity {
             intent.putExtra(FINAL_ANSWER1, finalString);
 
             startActivity(intent);
+
         }
+
 
         else {
 
             Toast.makeText(Quiz1Activity.this, "Please answer all questions!",
                     Toast.LENGTH_SHORT).show();
+
         }
     }
 
@@ -254,9 +257,9 @@ public class Quiz1Activity extends AppCompatActivity {
 
         }
 
-        else if (list2.size() > 0) {
+        if (list2.size() > 0) {
 
-            for (int i = 0; i < list1.size(); i++) {
+            for (int i = 0; i < list2.size(); i++) {
 
 
                 if (list2.get(i).contains("q1") || list2.get(i).contains("q2") || list2.get(i).contains("q3")) {
@@ -270,7 +273,7 @@ public class Quiz1Activity extends AppCompatActivity {
         }
 
 
-          if (questionTracker < 3) {
+        if (questionTracker < 3) {
 
               return false;
 

@@ -225,9 +225,9 @@ public class Quiz2Activity extends AppCompatActivity {
 
         }
 
-        else if (list2.size() > 0) {
+        if (list2.size() > 0) {
 
-            for (int i = 0; i < list1.size(); i++) {
+            for (int i = 0; i < list2.size(); i++) {
 
 
                 if (list2.get(i).contains("q1") || list2.get(i).contains("q2") || list2.get(i).contains("q3")) {
