@@ -51,10 +51,12 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 if(q1o1.isSelected()) {
                     q1o1.setSelected(true);
-                    q1o2.setSelected(false);
+
                 }
                 else if (!q1o1.isSelected()){
                     q1o1.setSelected(true);
+                    q1o2.setSelected(false);
+
                 }
 
 
@@ -72,10 +74,10 @@ public class Quiz1Activity extends AppCompatActivity {
                 if(q1o2.isSelected()) {
 
                     q1o2.setSelected(true);
-                    q1o1.setSelected(false);
                 }
                 else if (!q1o2.isSelected()){
                     q1o2.setSelected(true);
+                    q1o1.setSelected(false);
                 }
 
             }
