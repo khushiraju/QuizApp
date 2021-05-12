@@ -47,8 +47,15 @@ public class Quiz1Activity extends AppCompatActivity {
             // @Override
             public void onClick(View view) {
                 // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o1);
+
+                if(q1o1.isSelected()) {
+                    q1o1.setSelected(true);
+                }
+                else if (!q1o1.isSelected()){
+                    q1o1.setSelected(true);
+                }
+
 
 
             }
@@ -60,6 +67,15 @@ public class Quiz1Activity extends AppCompatActivity {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o2);
+
+                if(q1o2.isSelected()) {
+
+                    q1o2.setSelected(true);
+                    q1o1.setSelected(false);
+                }
+                else if (!q1o2.isSelected()){
+                    q1o2.setSelected(true);
+                }
 
             }
         });
