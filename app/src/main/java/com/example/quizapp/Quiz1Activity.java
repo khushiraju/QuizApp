@@ -49,6 +49,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o1);
+                q1o1.setBackgroundColor().setColorFilter(R.color.colorPrimaryMed);
 
             }
         });
