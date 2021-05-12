@@ -68,13 +68,12 @@ public class Quiz3Activity extends AppCompatActivity {
                 getAnswers(q1o2);
 
                 if(q1o2.isSelected()) {
-                    q1o2.setSelected(true);
 
+                    q1o2.setSelected(true);
                 }
                 else if (!q1o2.isSelected()){
                     q1o2.setSelected(true);
-                    q1o2.setSelected(false);
-
+                    q1o1.setSelected(false);
                 }
 
             }
@@ -93,7 +92,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }
                 else if (!q2o1.isSelected()){
                     q2o1.setSelected(true);
-                    q2o1.setSelected(false);
+                    q2o2.setSelected(false);
 
                 }
 
@@ -113,7 +112,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }
                 else if (!q2o2.isSelected()){
                     q2o2.setSelected(true);
-                    q2o2.setSelected(false);
+                    q2o1.setSelected(false);
 
                 }
 
@@ -133,7 +132,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }
                 else if (!q3o1.isSelected()){
                     q3o1.setSelected(true);
-                    q3o1.setSelected(false);
+                    q3o2.setSelected(false);
 
                 }
 
@@ -153,7 +152,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }
                 else if (!q3o2.isSelected()){
                     q3o2.setSelected(true);
-                    q3o2.setSelected(false);
+                    q3o1.setSelected(false);
 
                 }
 
