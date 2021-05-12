@@ -25,6 +25,7 @@ public class SignInActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private FirebaseAuth mAuth;
+    private String hello;
 
 
     @Override
