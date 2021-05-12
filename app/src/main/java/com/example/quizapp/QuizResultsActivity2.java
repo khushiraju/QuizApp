@@ -81,16 +81,16 @@ public class QuizResultsActivity2 extends AppCompatActivity {
 
     public void addEvent() {
 
-        String userq1A = findViewById(R.id.q1answer).toString();
+        //String userq1A = findViewById(R.id.q1answer).toString();
         String userq2A = findViewById(R.id.q2answer).toString();
-        String userq3A = findViewById(R.id.q3answer).toString();
+        //String userq3A = findViewById(R.id.q3answer).toString();
 
         // Creates a key-value map of the object to add to the collection
         Map<String, Object> user = new HashMap<String, Object>();
         // Adds the all the key-value pairs to this object
-        user.put(Q1A_KEY, userq1A);
+        //user.put(Q1A_KEY, userq1A);
         user.put(Q2A_KEY, userq2A);
-        user.put(Q3A_KEY, userq3A);
+        //user.put(Q3A_KEY, userq3A);
         Log.i(TAG, user.toString());
 
         db.collection("quizApp")

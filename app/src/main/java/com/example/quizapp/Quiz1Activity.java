@@ -205,6 +205,8 @@ public class Quiz1Activity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
 
         }
+
+
     }
 
 
