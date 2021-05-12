@@ -47,6 +47,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o1);
 
+                if(q1o1.isSelected()) {
+                    q1o1.setSelected(true);
+
+                }
+                else if (!q1o1.isSelected()){
+                    q1o1.setSelected(true);
+                    q1o2.setSelected(false);
+
+                }
+
             }
         });
 
@@ -56,6 +66,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o2);
+
+                if(q1o2.isSelected()) {
+                    q1o2.setSelected(true);
+
+                }
+                else if (!q1o2.isSelected()){
+                    q1o2.setSelected(true);
+                    q1o2.setSelected(false);
+
+                }
 
             }
         });
@@ -67,6 +87,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q2o1);
 
+                if(q2o1.isSelected()) {
+                    q2o1.setSelected(true);
+
+                }
+                else if (!q2o1.isSelected()){
+                    q2o1.setSelected(true);
+                    q2o1.setSelected(false);
+
+                }
+
             }
         });
 
@@ -76,6 +106,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q2o2);
+
+                if(q2o2.isSelected()) {
+                    q2o2.setSelected(true);
+
+                }
+                else if (!q2o2.isSelected()){
+                    q2o2.setSelected(true);
+                    q2o2.setSelected(false);
+
+                }
 
             }
         });
@@ -87,6 +127,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q3o1);
 
+                if(q3o1.isSelected()) {
+                    q3o1.setSelected(true);
+
+                }
+                else if (!q3o1.isSelected()){
+                    q3o1.setSelected(true);
+                    q3o1.setSelected(false);
+
+                }
+
             }
         });
 
@@ -96,6 +146,16 @@ public class Quiz3Activity extends AppCompatActivity {
                 // set the color to relative layout
                 //q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q3o2);
+
+                if(q3o2.isSelected()) {
+                    q3o2.setSelected(true);
+
+                }
+                else if (!q3o2.isSelected()){
+                    q3o2.setSelected(true);
+                    q3o2.setSelected(false);
+
+                }
 
             }
         });
