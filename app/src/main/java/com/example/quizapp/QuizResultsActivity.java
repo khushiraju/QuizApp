@@ -60,6 +60,9 @@ public class QuizResultsActivity extends AppCompatActivity {
             textView1.setText(message1);
         }
 
+        //addEvent();
+
+
     }
 
 
