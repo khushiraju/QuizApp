@@ -34,7 +34,7 @@ public class Quiz1Activity extends AppCompatActivity {
     public static final String Q3A_KEY = "q3A";
     private FirebaseFirestore db;
 
-    private FirebaseAuth mAuth;
+   // private FirebaseAuth mAuth;
 
 
     @Override
@@ -207,7 +207,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 finalString = "Introvert";
             }
 
-            addEvent();
+            //addEvent();
 
             extrovert.clear();
             introvert.clear();

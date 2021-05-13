@@ -34,7 +34,7 @@ public class QuizResultsActivity extends AppCompatActivity {
     // reference to entire database
     private FirebaseFirestore db;
 
-    private FirebaseAuth mAuth;
+   // private FirebaseAuth mAuth;
 
 
     @Override
@@ -43,7 +43,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         setContentView(R.layout.quiz_results);
 
         // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+       // mAuth = FirebaseAuth.getInstance();
 
         // get intent from quiz page
         Intent intent = getIntent();
