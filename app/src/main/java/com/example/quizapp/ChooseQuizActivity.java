@@ -89,7 +89,7 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
         Intent intent = new Intent (this, MainActivity.class);
         SignInActivity.mAuth.signOut();
-        CreateAccountActivity.mAuth.getInstance().signOut();
+        //CreateAccountActivity.mAuth.getInstance().signOut();
         //Intent intent = new Intent (this, MainActivity.class);
         //SignInActivity.userID = null;
         startActivity(intent);
