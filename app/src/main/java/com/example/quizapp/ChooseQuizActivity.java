@@ -33,12 +33,23 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
     }
 
+    // This function takes you to the page with ALL of your quiz answers.
+
     public void goToFinalResultPage(View view) {
         Intent intent = new Intent(this, AllQuizResults.class);
         startActivity(intent);
     }
 
-    // this probably works okay for now, but could be more efficient if we ever add more quizzes
+    /*
+
+    Based on which button is pressed, go to the corresponding quiz page.
+
+    Online Code Resources: https://developer.android.com/reference/android/R.id
+    getId() method: https://stackoverflow.com/questions/14647810/easier-way-to-get-views-id-string-by-its-id-int
+
+
+
+     */
 
     public void goToQuiz (View quiz) {
 

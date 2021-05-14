@@ -26,8 +26,7 @@ public class QuizResultsActivity extends AppCompatActivity {
     public final String TAG = "QuizResultsActivity";
 
 
-    // reference to entire database
-    private FirebaseFirestore db;
+
 
 
 
@@ -57,7 +56,7 @@ public class QuizResultsActivity extends AppCompatActivity {
     }
 
 
-
+    // fired when Back button pressed. When pressed, it goes to the page before it (ChooseQuizActivity.class)
     public void backButton(View view) {
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         startActivity(intent);

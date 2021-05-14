@@ -123,6 +123,8 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     }
 
+    // When back button clicked, go back to previous page using an intent (MainActivity.class)
+
     public void backButton(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

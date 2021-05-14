@@ -28,6 +28,11 @@ public class SignInActivity extends AppCompatActivity {
     public static FirebaseFirestore db;
     private FirebaseAuth mAuth;
 
+     /*
+
+    onCreate recieves intent from homeScreen and instantiates mAuth and db for FireStore functions
+
+      */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +45,14 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
+    // fired when Back button pressed. When pressed, it goes to the page before it (MainActivity.class)
+
     public void backButton(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
+    // This functions fires when the user HITs the button to create their account. Calls createAccount() and signIn()
 
     public void goToQuizFeed(View view) {
 
@@ -60,6 +68,13 @@ public class SignInActivity extends AppCompatActivity {
 
 
     }
+
+    /*
+
+    After the account is created, the user is automatically signed in.
+    Sign In Authentication code from FireBase docs: https://firebase.google.com/docs/auth/android/start?authuser=0
+
+     */
 
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
@@ -89,8 +104,8 @@ public class SignInActivity extends AppCompatActivity {
                 });
         // [END sign_in_with_email]
     }
-
-
+// other required method stubs according to firebase
+// https://github.com/firebase/snippets-android/blob/6ec6b5f9d5e79437aabf79c6856d77a8f1a0655f/auth/app/src/main/java/com/google/firebase/quickstart/auth/EmailPasswordActivity.java#L85-L102
     private void reload() { }
 
     private void updateUI(FirebaseUser user) {

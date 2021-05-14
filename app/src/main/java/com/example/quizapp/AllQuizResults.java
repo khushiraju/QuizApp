@@ -18,6 +18,7 @@ public class AllQuizResults extends AppCompatActivity {
 
     }
 
+    // when back button pressed, go back the the quiz feed using an Intent (ChooseQuizActivity.class)
     public void backButton(View view) {
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         startActivity(intent);
