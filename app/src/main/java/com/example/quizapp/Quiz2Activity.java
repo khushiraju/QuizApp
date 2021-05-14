@@ -198,6 +198,18 @@ public class Quiz2Activity extends AppCompatActivity {
                 finalString = "Morning Bird";
             }
 
+            if (SignInActivity.db == null) {
+                CreateAccountActivity.db.collection("quizResults").document(CreateAccountActivity.userID)
+                        .update(CreateAccountActivity.QUIZ2, finalString);
+
+
+            }
+            else {
+                SignInActivity.db.collection("quizResults").document(SignInActivity.userID)
+                        .update(CreateAccountActivity.QUIZ2, finalString);
+
+            }
+
             nightOwl.clear();
             morningBird.clear();
 

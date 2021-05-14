@@ -180,6 +180,18 @@ public class Quiz3Activity extends AppCompatActivity {
                 finalString = "Lazy";
             }
 
+            if (SignInActivity.db == null) {
+                CreateAccountActivity.db.collection("quizResults").document(CreateAccountActivity.userID)
+                        .update(CreateAccountActivity.QUIZ3, finalString);
+
+
+            }
+            else {
+                SignInActivity.db.collection("quizResults").document(SignInActivity.userID)
+                        .update(CreateAccountActivity.QUIZ3, finalString);
+
+            }
+
             active.clear();
             lazy.clear();
 
