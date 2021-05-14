@@ -40,6 +40,11 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
+    public void backButton(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 
     public void goToQuizFeed(View view) {
 

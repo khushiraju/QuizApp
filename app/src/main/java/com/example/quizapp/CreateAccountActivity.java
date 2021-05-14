@@ -116,6 +116,11 @@ public class CreateAccountActivity extends AppCompatActivity {
         // [END create_user_with_email]
     }
 
+    public void backButton(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     private void signIn(String email, String password) {
         // [START sign_in_with_email]
         Intent intent = new Intent(this, ChooseQuizActivity.class);

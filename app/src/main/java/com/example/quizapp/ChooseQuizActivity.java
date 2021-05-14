@@ -33,6 +33,11 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
     }
 
+    public void goToFinalResultPage(View view) {
+        Intent intent = new Intent(this, AllQuizResults.class);
+        startActivity(intent);
+    }
+
     // this probably works okay for now, but could be more efficient if we ever add more quizzes
 
     public void goToQuiz (View quiz) {
@@ -62,17 +67,6 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
 
         }
-
-
-
-
-    }
-
-
-    public void goToResults (View view) {
-
-        Intent intent = new Intent (this, QuizResultsActivity.class);
-        startActivity(intent);
 
 
 
