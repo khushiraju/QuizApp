@@ -33,7 +33,7 @@ public class Quiz1Activity extends AppCompatActivity {
     public static final String Q2A_KEY = "q2A";
     public static final String Q3A_KEY = "q3A";
 
-
+    public String hey;
 
     @Override
 
