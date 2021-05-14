@@ -36,6 +36,9 @@ public class CreateAccountActivity extends AppCompatActivity {
     public static final String NAME_KEY = "name";
     public static final String EMAIL_KEY = "email";
     public static final String PASSWORD_KEY = "password";
+    public static final String QUIZ1 = "quiz1";
+    public static final String QUIZ2 = "quiz2";
+    public static final String QUIZ3= "quiz3";
 
 
 
@@ -43,6 +46,12 @@ public class CreateAccountActivity extends AppCompatActivity {
     private FirebaseFirestore db;
 
     private FirebaseAuth mAuth;
+
+    private String userID;
+
+    private String quiz1Result = "No quiz taken";
+    private String quiz2Result = "No quiz taken";
+    private String quiz3Result = "No quiz taken";
 
         //private FirebaseUser currentUser;
         @Override
@@ -54,6 +63,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             // ...
             // Initialize Firebase Auth
             mAuth = FirebaseAuth.getInstance();
+            db = FirebaseFirestore.getInstance();
 
             Intent intent = getIntent();
         }
@@ -69,7 +79,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         }
 
 
-    private void createAccount(String email, String password) {
+    private void createAccount(String email, String password, String name) {
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -78,6 +88,21 @@ public class CreateAccountActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
+                            userID = mAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = db.collection("quizResults").document(userID);
+                            Map<String, Object> newUser = new HashMap<String, Object>();
+                            // Adds the all the key-value pairs to this object
+                            newUser.put(NAME_KEY, name);
+                            newUser.put(EMAIL_KEY, email);
+                            newUser.put(QUIZ1, quiz1Result);
+                            newUser.put(QUIZ2, quiz2Result);
+                            newUser.put(QUIZ3, quiz3Result);
+                            documentReference.set(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d(TAG, "New User Created! UID:" + userID);
+                                }
+                            });
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
@@ -134,7 +159,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
 
 
-        createAccount(userEmail, userPassword);
+        createAccount(userEmail, userPassword, userName);
         signIn(userEmail, userPassword);
 
         // we only want to go to the next page IF the signin is succesful. otherwise, it should dispaly the toast.
