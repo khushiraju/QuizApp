@@ -25,11 +25,18 @@ public class Quiz2Activity extends AppCompatActivity {
 
     @Override
 
-    // Resource Citations:  https://www.geeksforgeeks.org/how-to-change-the-background-color-after-clicking-the-button-in-android/
-    // https://stackoverflow.com/questions/3882064/how-to-change-color-of-button-in-android-when-clicked
-    // https://stackoverflow.com/questions/14647810/easier-way-to-get-views-id-string-by-its-id-int
-    // https://stackoverflow.com/questions/3882064/how-to-change-color-of-button-in-android-when-clicked
-    // https://www.youtube.com/watch?v=RJV9Ur-CUpw 
+
+    /* OnCreate Code Online Resources:
+    Button Color Change: https://www.youtube.com/watch?v=c_TVDow4Rbk
+    Button onClick Listener: https://www.geeksforgeeks.org/how-to-change-the-background-color-after-clicking-the-button-in-android/
+
+
+    onCreate handles Button OnClick events such as color changes when buttons are clicked and also calls getAnswers() for quiz functions
+    that store question responses. Also gets intent from ChooseQuizActivity
+
+
+     */
+
 
 
 
@@ -50,7 +57,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q3o1 = findViewById(R.id.q3option1);
         q3o2 = findViewById(R.id.q3option2);
 
-        //constraintLayout = findViewById(R.id.color);
+
 
         Intent intent = getIntent();
 
@@ -59,7 +66,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q1o1.setOnClickListener(new View.OnClickListener() {
            // @Override
             public void onClick(View view) {
-                // set the color to relative layout
+
                 q1o1.setBackgroundColor(Color.BLUE);
                 getAnswers(q1o1);
 
@@ -79,8 +86,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q1o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q1o2);
 
                 if(q1o2.isSelected()) {
@@ -99,8 +105,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q2o1.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q2o1);
 
                 if(q2o1.isSelected()) {
@@ -119,8 +124,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q2o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q2o2);
 
                 if(q2o2.isSelected()) {
@@ -139,8 +143,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q3o1.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q3o1);
 
                 if(q3o1.isSelected()) {
@@ -159,8 +162,7 @@ public class Quiz2Activity extends AppCompatActivity {
         q3o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q3o2);
 
                 if(q3o2.isSelected()) {
@@ -184,6 +186,20 @@ public class Quiz2Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    /*
+
+   Online Code Resources:
+
+  FireStore Update Collection: https://firebase.google.com/docs/firestore/manage-data/add-data?authuser=0#java_16
+
+
+   compares the lengths of the two personality arrays that answers can fall into. Whichever personality list that has the bigger size will end up being the result of the user
+   earns after taking the quiz. Then, the result is stored iin FireStore in the user's own data collection. The lists are cleared so that the quizzes can be taken again.
+   An intent is sent to the page that displays the user's result. If the user has not answered all the questions (which is determined through the isComplete() function call, then
+   a Toast will appear indicating that they need to finish all questions before proceeding
+
+    */
     public void submitResults2(View view) {
 
 
@@ -225,6 +241,21 @@ public class Quiz2Activity extends AppCompatActivity {
 
     }
 
+    /*
+
+    Online Code Resources:
+
+    Get name of View id: https://www.codegrepper.com/code-examples/java/android+studio+get+id+name+from+view
+
+    based on the button id, which indicates the "option number" for each of the question, the id is stored in one of two personality lists: each of the the lists corresponds to
+    a result, as there are only two possible results for a quiz. In addition, it calls the function fillArray() which makes sure that the same answer cannot be added to the list twice
+    and that quiz answers can be changed.
+
+
+
+     */
+
+
 
     public void getAnswers(View answer) {
 
@@ -243,6 +274,19 @@ public class Quiz2Activity extends AppCompatActivity {
         }
 
     }
+
+     /*
+
+        This function is very essential, as it makes sure that answers choices are added to the ArrayLists correctly.
+        The function checks to see if BOTH of the ArrayLists are empty. If so, then an answer can be added to its corresponding list.
+        If both of the lists are NOT empty, then the function checks the ArrayLists to make sure that the option the user pressed has not already been added to an array. If if has been added,
+        nothing happens and the list stays stays as is.
+        If an answers has NOT been added to its corresponding list, then we need to check that the QUESTION has not been answered. The function loops through the OTHER array and checks to see
+        if any of its elements contain the same starting character (q1, q2, or q3) as the id of the answer choice that the user clicked, the that element is REMOVED from the OTHER array and the NEW
+      , most RECENT choice the user clicked is added to its corresponding array.
+
+
+         */
 
     public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
 
@@ -278,6 +322,14 @@ public class Quiz2Activity extends AppCompatActivity {
             }
         }
     }
+
+    /*
+
+      This method checks both arrays to verify that all questions have been answered. Loops through both arrays looking for elements that contains "q1", "q2", or "q3". Every time
+      these substrings are found, a counter goes up. If the counter does NOT equal 3 by the time both arrays are traversed (count 3 for 3 questions), then the method returns false.
+      Method called by submitResults and displays a Toast if method returns false.
+
+       */
 
     public boolean isComplete(ArrayList <String> list1, ArrayList <String> list2){
 

@@ -32,12 +32,22 @@ public class Quiz1Activity extends AppCompatActivity {
     public static final String Q1A_KEY = "q1A";
     public static final String Q2A_KEY = "q2A";
     public static final String Q3A_KEY = "q3A";
-    //private FirebaseFirestore db;
 
-   // private FirebaseAuth mAuth;
 
 
     @Override
+
+    /* OnCreate Code Online Resources:
+    Button Color Change: https://www.youtube.com/watch?v=c_TVDow4Rbk
+    Button onClick Listener: https://www.geeksforgeeks.org/how-to-change-the-background-color-after-clicking-the-button-in-android/
+
+
+    onCreate handles Button OnClick events such as color changes when buttons are clicked and also calls getAnswers() for quiz functions
+    that store question responses. Also gets intent from ChooseQuizActivity
+
+
+     */
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +66,15 @@ public class Quiz1Activity extends AppCompatActivity {
         q3o1 = findViewById(R.id.q3option1);
         q3o2 = findViewById(R.id.q3option2);
 
-        //constraintLayout = findViewById(R.id.color);
+
 
         Intent intent = getIntent();
 
         q1o1.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
+
                 getAnswers(q1o1);
 
                 if(q1o1.isSelected()) {
@@ -83,8 +93,7 @@ public class Quiz1Activity extends AppCompatActivity {
         q1o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q1o2);
 
                 if(q1o2.isSelected()) {
@@ -102,8 +111,7 @@ public class Quiz1Activity extends AppCompatActivity {
         q2o1.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q2o1);
 
                 if(q2o1.isSelected()) {
@@ -122,8 +130,7 @@ public class Quiz1Activity extends AppCompatActivity {
         q2o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q2o2);
 
                 if(q2o2.isSelected()) {
@@ -142,8 +149,7 @@ public class Quiz1Activity extends AppCompatActivity {
         q3o1.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q3o1);
 
                 if(q3o1.isSelected()) {
@@ -162,8 +168,7 @@ public class Quiz1Activity extends AppCompatActivity {
         q3o2.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View view) {
-                // set the color to relative layout
-                //q1o1.setBackgroundColor(Color.BLUE);
+
                 getAnswers(q3o2);
 
                 if(q3o2.isSelected()) {
@@ -182,16 +187,26 @@ public class Quiz1Activity extends AppCompatActivity {
     }
 
 
-    // function goest to quiz feed.
+    // function goes to quiz feed.
     public void backButton(View view) {
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         startActivity(intent);
     }
 
-    // get text IDS for each of the buttons, need an indication when to
+
+    /*
+
+    Online Code Resources:
+
+   FireStore Update Collection: https://firebase.google.com/docs/firestore/manage-data/add-data?authuser=0#java_16
 
 
-    // goes to quiz results page. still need to go back and add code so we can take information from it.
+    compares the lengths of the two personality arrays that answers can fall into. Whichever personality list that has the bigger size will end up being the result of the user
+    earns after taking the quiz. Then, the result is stored iin FireStore in the user's own data collection. The lists are cleared so that the quizzes can be taken again.
+    An intent is sent to the page that displays the user's result. If the user has not answered all the questions (which is determined through the isComplete() function call, then
+    a Toast will appear indicating that they need to finish all questions before proceeding
+
+     */
 
     public void submitResults(View view) {
 
@@ -243,37 +258,26 @@ public class Quiz1Activity extends AppCompatActivity {
 
     }
 
-
-
-
-
-    // ROUGH SKETCH FOR WHAT THE QUIZ CODE WILL LOOK LIKE
-
     /*
-    1. When a button for an answer choice is pressed, we need to make sure that that the button has not been clicked
-    before. If it has, we need to make sure that it doesn't get added again.
-    2. We also need to make sure that you can change your answer to a question. To do this, we need to check the corresponding
-    list and the OTHER list. If the question has already been answered but the answer is for the opposite answer choice
-    (in the opposite list, then we need to remove the element for that question from the other list and put it in the list
-    for the button they MOST recently pressed.
-    3. ok, but when CAN we add an answer to the list? we can add answer to the list when it is NOT in the list, and there is not
-    already an answer to that question., or if the length of the list is 0.
 
-    CODE PLAN:
+   Online Code Resources:
 
+   Get name of View id: https://www.codegrepper.com/code-examples/java/android+studio+get+id+name+from+view
 
-    i think i need to make a whole new method to call in getAnswers UGH
+   based on the button id, which indicates the "option number" for each of the question, the id is stored in one of two personality lists: each of the the lists corresponds to
+   a result, as there are only two possible results for a quiz. In addition, it calls the function fillArray() which makes sure that the same answer cannot be added to the list twice
+   and that quiz answers can be changed.
 
-
-
-    https://www.codegrepper.com/code-examples/java/android+studio+get+id+name+from+view
 
 
      */
 
+
+
+
     public void getAnswers(View answer) {
 
-        // what is getResourceName vs. getResourceEntryName
+
         String choice = answer.getResources().getResourceEntryName(answer.getId());
 
 
@@ -291,6 +295,22 @@ public class Quiz1Activity extends AppCompatActivity {
 
 
         }
+
+        /*
+
+        This function is very essential, as it makes sure that answers choices are added to the ArrayLists correctly.
+        The function checks to see if BOTH of the ArrayLists are empty. If so, then an answer can be added to its corresponding list.
+        If both of the lists are NOT empty, then the function checks the ArrayLists to make sure that the option the user pressed has not already been added to an array. If if has been added,
+        nothing happens and the list stays stays as is.
+        If an answers has NOT been added to its corresponding list, then we need to check that the QUESTION has not been answered. The function loops through the OTHER array and checks to see
+        if any of its elements contain the same starting character (q1, q2, or q3) as the id of the answer choice that the user clicked, the that element is REMOVED from the OTHER array and the NEW
+      , most RECENT choice the user clicked is added to its corresponding array.
+
+
+
+
+
+         */
 
 
       public void fillArrays(String choice, ArrayList<String> correspondingArray, ArrayList<String> oppositeArray)  {
@@ -327,6 +347,17 @@ public class Quiz1Activity extends AppCompatActivity {
                   }
               }
       }
+
+
+      /*
+
+      This method checks both arrays to verify that all questions have been answered. Loops through both arrays looking for elements that contains "q1", "q2", or "q3". Every time
+      these substrings are found, a counter goes up. If the counter does NOT equal 3 by the time both arrays are traversed (count 3 for 3 questions), then the method returns false.
+      Method called by submitResults and displays a Toast if method returns false.
+
+
+
+       */
 
       public boolean isComplete(ArrayList <String> list1, ArrayList <String> list2){
 
@@ -376,45 +407,9 @@ public class Quiz1Activity extends AppCompatActivity {
               return true;
           }
 
-
-
-
     }
 
-   /*
-    public void addEvent() {
 
-        String userq1A = findViewById(R.id.q1answer).toString();
-        //String userq2A = findViewById(R.id.q2answer).toString();
-        //String userq3A = findViewById(R.id.q3answer).toString();
-
-        // Creates a key-value map of the object to add to the collection
-        Map<String, Object> user = new HashMap<String, Object>();
-        // Adds the all the key-value pairs to this object
-        user.put(Q1A_KEY, finalString);
-        //user.put(Q2A_KEY, userq2A);
-        //user.put(Q3A_KEY, userq3A);
-        Log.i(TAG, user.toString());
-
-        db.collection("quizApp")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        toastMessage("Event stored successfully");
-                        Log.i(TAG, "Success");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        toastMessage("Event failed to add");
-                        Log.i(TAG, "Failure");
-                    }
-                });
-    }
-
-    */
     private void toastMessage(String message){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
