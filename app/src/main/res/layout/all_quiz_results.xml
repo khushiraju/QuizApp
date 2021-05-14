@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryLight"
-    tools:context=".QuizResultsActivity">
+    tools:context=".AllQuizResults">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:fontFamily="monospace"
-        android:text="Quiz Result"
+        android:text="Quiz Results"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="32sp"

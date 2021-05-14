@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:fontFamily="monospace"
-        android:text="Quiz Results"
+        android:text="Quiz Result"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="32sp"
