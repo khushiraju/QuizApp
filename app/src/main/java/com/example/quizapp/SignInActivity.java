@@ -26,7 +26,7 @@ public class SignInActivity extends AppCompatActivity {
     public static String userID;
 
     public static FirebaseFirestore db;
-    private FirebaseAuth mAuth;
+    public static FirebaseAuth mAuth;
 
      /*
 

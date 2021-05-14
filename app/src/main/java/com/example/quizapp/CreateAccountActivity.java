@@ -95,6 +95,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             userID = mAuth.getCurrentUser().getUid();
+
                             DocumentReference documentReference = db.collection("quizResults").document(userID);
                             Map<String, Object> newUser = new HashMap<String, Object>();
                             // Adds the all the key-value pairs to this object
