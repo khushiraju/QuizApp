@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignInActivity extends AppCompatActivity {
@@ -22,8 +23,9 @@ public class SignInActivity extends AppCompatActivity {
 
 
     public final String TAG = "SignInActivity";
+    public static String userID;
 
-    private FirebaseFirestore db;
+    public static FirebaseFirestore db;
     private FirebaseAuth mAuth;
 
 
@@ -33,6 +35,7 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.sign_in);
 
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
         Intent intent = getIntent();
 
     }
@@ -64,6 +67,8 @@ public class SignInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            userID = mAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = db.collection("quizResults").document(userID);
                             Toast.makeText(SignInActivity.this, "Login Successful!",
                                     Toast.LENGTH_SHORT).show();
                             startActivity(intent);

@@ -35,7 +35,6 @@ public class CreateAccountActivity extends AppCompatActivity {
     // Constants to use for labels in database
     public static final String NAME_KEY = "name";
     public static final String EMAIL_KEY = "email";
-    public static final String PASSWORD_KEY = "password";
     public static final String QUIZ1 = "quiz1";
     public static final String QUIZ2 = "quiz2";
     public static final String QUIZ3= "quiz3";
@@ -43,11 +42,11 @@ public class CreateAccountActivity extends AppCompatActivity {
 
 
     // reference to entire database
-    private FirebaseFirestore db;
+    public static FirebaseFirestore db;
 
-    private FirebaseAuth mAuth;
+    public static FirebaseAuth mAuth;
 
-    private String userID;
+    public static String userID;
 
     private String quiz1Result = "No quiz taken";
     private String quiz2Result = "No quiz taken";
@@ -251,4 +250,10 @@ public class CreateAccountActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
 
     }
+    public String getUserID() {
+
+        return this.userID;
+    }
+
+
 }

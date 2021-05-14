@@ -32,7 +32,7 @@ public class Quiz1Activity extends AppCompatActivity {
     public static final String Q1A_KEY = "q1A";
     public static final String Q2A_KEY = "q2A";
     public static final String Q3A_KEY = "q3A";
-    private FirebaseFirestore db;
+    //private FirebaseFirestore db;
 
    // private FirebaseAuth mAuth;
 
@@ -207,8 +207,20 @@ public class Quiz1Activity extends AppCompatActivity {
                 finalString = "Introvert";
             }
 
-            //addEvent();
+            //code to update the database:
+            System.out.println(SignInActivity.userID);
 
+            if (SignInActivity.db == null) {
+                CreateAccountActivity.db.collection("quizResults").document(CreateAccountActivity.userID)
+            .update(CreateAccountActivity.QUIZ1, finalString);
+
+
+            }
+            else {
+                SignInActivity.db.collection("quizResults").document(SignInActivity.userID)
+                        .update(CreateAccountActivity.QUIZ1, finalString);
+
+            }
             extrovert.clear();
             introvert.clear();
 
@@ -264,7 +276,7 @@ public class Quiz1Activity extends AppCompatActivity {
         // what is getResourceName vs. getResourceEntryName
         String choice = answer.getResources().getResourceEntryName(answer.getId());
 
-        //pseudo code:
+
 
         if (choice.contains("option1")){
 
@@ -369,6 +381,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
     }
 
+   /*
     public void addEvent() {
 
         String userq1A = findViewById(R.id.q1answer).toString();
@@ -400,6 +413,8 @@ public class Quiz1Activity extends AppCompatActivity {
                     }
                 });
     }
+
+    */
     private void toastMessage(String message){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
