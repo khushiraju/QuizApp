@@ -26,24 +26,18 @@ public class QuizResultsActivity extends AppCompatActivity {
     public final String TAG = "QuizResultsActivity";
 
 
-    // Constants to use for labels in database
-
-
-
-
     // reference to entire database
     private FirebaseFirestore db;
 
-   // private FirebaseAuth mAuth;
 
+
+    // onCreate displays result string provided from the Intent from Quiz1Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_results);
 
-        // Initialize Firebase Auth
-       // mAuth = FirebaseAuth.getInstance();
 
         // get intent from quiz page
         Intent intent = getIntent();
@@ -52,7 +46,6 @@ public class QuizResultsActivity extends AppCompatActivity {
 
         String message1 = intent.getStringExtra(Quiz1Activity.FINAL_ANSWER1);
 
-        //textView1.setText(R.string.quiz1String);
 
         if (message1.equals("Introvert") || message1.equals("Extrovert")) {
             textView1.setText(message1);

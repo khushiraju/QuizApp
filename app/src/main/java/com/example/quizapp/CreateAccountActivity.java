@@ -52,14 +52,13 @@ public class CreateAccountActivity extends AppCompatActivity {
     private String quiz2Result = "No quiz taken";
     private String quiz3Result = "No quiz taken";
 
-        //private FirebaseUser currentUser;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.create_account);
 
-            // db = FirebaseFirestore.getInstance();
-            // ...
+
             // Initialize Firebase Auth
             mAuth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
@@ -78,6 +77,14 @@ public class CreateAccountActivity extends AppCompatActivity {
         }
 
 
+        /*
+
+        Online Code Resources:
+
+        Authentication Code is from Firebase Docs: https://firebase.google.com/docs/auth/android/start?authuser=0
+        Firebase Firestore Collection code is from: https://www.youtube.com/watch?v=RiHGwJ_u27k
+
+         */
     private void createAccount(String email, String password, String name) {
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -113,7 +120,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                         }
                     }
                 });
-        // [END create_user_with_email]
+
     }
 
     public void backButton(View view) {
@@ -121,8 +128,16 @@ public class CreateAccountActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*
+
+    After the account is created, the user is automatically signed in.
+    Sign In Authentication code from FireBase docs: https://firebase.google.com/docs/auth/android/start?authuser=0
+
+
+     */
+
     private void signIn(String email, String password) {
-        // [START sign_in_with_email]
+
         Intent intent = new Intent(this, ChooseQuizActivity.class);
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -145,11 +160,11 @@ public class CreateAccountActivity extends AppCompatActivity {
                         }
                     }
                 });
-        // [END sign_in_with_email]
+
     }
 
 
-
+    // This functions fires when the user HITs the button to create their account. Calls createAccount() and signIn()
 
     public void goToQuizFeed(View view) {
 
@@ -166,99 +181,21 @@ public class CreateAccountActivity extends AppCompatActivity {
         createAccount(userEmail, userPassword, userName);
         signIn(userEmail, userPassword);
 
-        // we only want to go to the next page IF the signin is succesful. otherwise, it should dispaly the toast.
-        //Intent intent = new Intent(this, ChooseQuizActivity.class);
+
 
 
     }
 
-    /*
-
-    public void addEvent() {
-        EditText name = (EditText) findViewById(R.id.nameID);
-        EditText email = (EditText) findViewById(R.id.emailID);
-        EditText password = (EditText) findViewById(R.id.passwordID);
-
-        String userName = name.getText().toString();
-        String userEmail = email.getText().toString();
-        String userPassword = password.getText().toString();
-
-        // Creates a key-value map of the object to add to the collection
-        Map<String, Object> user = new HashMap<String, Object>();
-        // Adds the all the key-value pairs to this object
-        user.put(NAME_KEY, userName);
-        user.put(EMAIL_KEY, userEmail);
-        user.put(PASSWORD_KEY, userPassword);
-        Log.i(TAG, user.toString());
-
-        db.collection("quizApp")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        toastMessage("Event stored successfully");
-                        Log.i(TAG, "Success");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        toastMessage("Event failed to add");
-                        Log.i(TAG, "Failure");
-                    }
-                });
-
-        // Clear the event name field
-        name.setText("");
-        email.setText("");
-        password.setText("");
-
-        closeKeyboard();
-    }
 
 
-     */
-
-
-    /**
-     * This method will be called to minimize the on screen keyboard in the Activity
-     * When we get the current view, it is the view that has focus, which is the keyboard
-     * Credit - Found and suggested by Ram Dixit, 2019
-     *
-     * Source:  https://www.youtube.com/watch?v=CW5Xekqfx3I
-     */
-    /*
-    private void closeKeyboard() {
-        View view = this.getCurrentFocus();     // view will refer to the keyboard
-        if (view != null ){                     // if there is a view that has focus
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
-
-    */
-
-    /*
-        This method improves readability of the code for toast messages.  It is a simple helper method
-     */
-
-    /*
-    private void toastMessage(String message){
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    */
-
-
+ // other required methods according to firebase docs:
+ //https://github.com/firebase/snippets-android/blob/6ec6b5f9d5e79437aabf79c6856d77a8f1a0655f/auth/app/src/main/java/com/google/firebase/quickstart/auth/EmailPasswordActivity.java#L85-L102
     private void reload() { }
 
     private void updateUI(FirebaseUser user) {
 
     }
-    public String getUserID() {
 
-        return this.userID;
-    }
 
 
 }
