@@ -13,6 +13,8 @@ public class AllQuizResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_quiz_results);
 
+        Intent intent = getIntent();
+
 
 
 
