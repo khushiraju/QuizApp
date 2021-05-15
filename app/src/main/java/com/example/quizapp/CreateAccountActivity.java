@@ -168,6 +168,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     }
 
 
+
     // This functions fires when the user HITs the button to create their account. Calls createAccount() and signIn()
 
     public void goToQuizFeed(View view) {

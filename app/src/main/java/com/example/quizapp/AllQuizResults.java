@@ -28,14 +28,12 @@ public class AllQuizResults extends AppCompatActivity {
     public String quiz2Result;
     public String quiz3Result;
 
-    public TextView textView1 = findViewById(R.id.q1answer);
-    public TextView textView2 = findViewById(R.id.q2answer);
-    public TextView textView3 = findViewById(R.id.q3answer);
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_quiz_results);
-        //Intent intent = getIntent();
+        Intent intent = getIntent();
+        getDocumentWithOptions();
     }
 
     // when back button pressed, go back the the quiz feed using an Intent (ChooseQuizActivity.class)
@@ -44,10 +42,16 @@ public class AllQuizResults extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
+    // https://github.com/firebase/snippets-android/blob/6ec6b5f9d5e79437aabf79c6856d77a8f1a0655f/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L618-L633
+    // https://stackoverflow.com/questions/48492993/firestore-get-documentsnapshots-fields-value
     public void getDocumentWithOptions() {
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
         userID = mAuth.getCurrentUser().getUid();
         DocumentReference docRef = db.collection("quizResults").document(userID);
+        TextView textView1 = findViewById(R.id.q1answer);
+        TextView textView2 = findViewById(R.id.q2answer);
+        TextView textView3 = findViewById(R.id.q3answer);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -70,5 +74,5 @@ public class AllQuizResults extends AppCompatActivity {
             }
         });
     }
-*/
+
 }

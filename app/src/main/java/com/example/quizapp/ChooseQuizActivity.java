@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ChooseQuizActivity extends AppCompatActivity {
+    public final String TAG = "ChooseQuizActivity";
 
     private FirebaseAuth mAuth;
     @Override
@@ -88,7 +89,18 @@ public class ChooseQuizActivity extends AppCompatActivity {
 
 
         Intent intent = new Intent (this, MainActivity.class);
-        SignInActivity.mAuth.signOut();
+        //SignInActivity.mAuth.signOut();
+
+        if (SignInActivity.db == null) {
+            CreateAccountActivity.mAuth.signOut();
+            Log.i(TAG, "Sign Out Successful");
+        }
+        else {
+            SignInActivity.mAuth.signOut();
+            Log.i(TAG, "Sign Out Successful");
+
+        }
+
         //CreateAccountActivity.mAuth.getInstance().signOut();
         //Intent intent = new Intent (this, MainActivity.class);
         //SignInActivity.userID = null;
