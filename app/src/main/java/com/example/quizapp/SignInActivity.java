@@ -44,6 +44,15 @@ public class SignInActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            reload();
+        }
+    }
 
     // fired when Back button pressed. When pressed, it goes to the page before it (MainActivity.class)
 
